@@ -1,112 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Muhd Farhan | Digital Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 40px;
-      color: #222;
-    }
-    h1, h2, h3 {
-      color: #003366;
-    }
-    section {
-      margin-bottom: 40px;
-    }
-    ul {
-      margin-left: 20px;
-    }
-  </style>
+  <title>Farhan | Digital Portfolio</title>
+  <meta name="description"
+    content="Professional portfolio of Farhan, a developer specializing in human-centric digital solutions and fintech.">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
 
-  <h1>Muhd Farhan</h1>
-  <p><strong>Diploma in Business & Financial Technology</strong></p>
+  <!-- Navigation -->
+  <nav>
+    <div class="container nav-content">
+      <a href="#" class="logo">FARHAN<span style="color:var(--primary)">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">Let's Talk</a>
+    </div>
+  </nav>
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I am a final-year Diploma student in Business & Financial Technology with a strong interest in
-      software development and human-centric digital solutions. I enjoy building backend-driven
-      web applications and working in collaborative team environments.
-    </p>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <span class="section-tag reveal" style="margin-bottom: 1.5rem;">Available for new opportunities</span>
+      <h1 class="reveal">Building <span class="title-gradient">Digital</span> Experiences with Purpose.</h1>
+      <p class="reveal">I'm Farhan, a student in Business & Financial Technology passionate about creating software that
+        solves real-world problems and connects people.</p>
+      <div class="cta-group reveal">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#about" class="btn btn-outline">About Me</a>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>Featured Project</h2>
-    <h3>Intergenerational Web Platform</h3>
-    <p>
-      This project addresses the generational gap between youths and seniors in Singapore by providing
-      a digital platform that enables safe and meaningful interactions. The application was designed
-      with accessibility and usability in mind, especially for senior users.
-    </p>
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">About</span>
+        <h2 class="section-title">Bridging Tech & Business</h2>
+        <p style="max-width: 700px;">Currently pursuing a Diploma in Business & Financial Technology, I focus on
+          building backend-driven applications that are as functional as they are user-friendly. I thrive in
+          collaborative environments and love deconstructing complex problems.</p>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>My Role & Responsibilities</h2>
-    <ul>
-      <li>Group Leader for a team of five members</li>
-      <li>Designed and implemented Profile Management functionality</li>
-      <li>Designed and implemented Friends Management functionality</li>
-      <li>Supported integration of teammates’ modules</li>
-      <li>Assisted with debugging and system testing</li>
-    </ul>
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Selected Projects</h2>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <article class="project-card reveal">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1551288049-bbbda5366392?q=80&w=2070&auto=format&fit=crop"
+              alt="Intergenerational Web Platform">
+          </div>
+          <div class="project-info">
+            <span class="project-category">Web Platform / Social Tech</span>
+            <h3>Intergenerational Bridge</h3>
+            <p>A digital platform designed to bridge the generational gap between youth and seniors in Singapore,
+              focusing on accessibility and safe interaction.</p>
+            <div class="cta-group">
+              <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Case Study</a>
+              <a href="#" class="btn btn-outline"
+                style="padding: 0.5rem 1rem; font-size: 0.8rem; border:none; display:flex; align-items:center; gap:5px;">
+                <i data-lucide="external-link" style="width:14px"></i> Site
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card reveal">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop"
+              alt="Fintech Solution Mockup">
+          </div>
+          <div class="project-info">
+            <span class="project-category">Fintech / Backend</span>
+            <h3>Smart Wallet Integration</h3>
+            <p>A backend-driven module for managing digital transactions with a focus on security and high-performance
+              profile management.</p>
+            <div class="cta-group">
+              <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Case Study</a>
+              <a href="#" class="btn btn-outline"
+                style="padding: 0.5rem 1rem; font-size: 0.8rem; border:none; display:flex; align-items:center; gap:5px;">
+                <i data-lucide="github" style="width:14px"></i> Code
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>Technical Implementation</h2>
-    <p><strong>Profile Management</strong></p>
-    <ul>
-      <li>Implemented full CRUD operations</li>
-      <li>Applied form validation and error handling</li>
-      <li>Designed age-appropriate UI for accessibility</li>
-    </ul>
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Tech Stack</span>
+        <h2 class="section-title">Tools & Skills</h2>
+      </div>
 
-    <p><strong>Friends Management</strong></p>
-    <ul>
-      <li>Designed friend request and approval workflow</li>
-      <li>Implemented privacy controls for safe interactions</li>
-      <li>Restricted interactions to approved connections</li>
-    </ul>
+      <div class="skills-container reveal">
+        <div class="skill-item">
+          <div class="skill-icon"><i data-lucide="code-2"></i></div>
+          <span>Python</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><i data-lucide="layout"></i></div>
+          <span>Flask</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><i data-lucide="database"></i></div>
+          <span>SQLAlchemy</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><i data-lucide="layers"></i></div>
+          <span>HTML/CSS</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><i data-lucide="terminal"></i></div>
+          <span>JavaScript</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><i data-lucide="git-branch"></i></div>
+          <span>Git / GitHub</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><i data-lucide="users"></i></div>
+          <span>Agile</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><i data-lucide="shield-check"></i></div>
+          <span>Security</span>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>Challenges & Learning</h2>
-    <p>
-      A key challenge was integrating features developed by different team members into a single system.
-      I worked closely with teammates to align database structures and resolve logic conflicts. This
-      improved my problem-solving skills and reinforced the importance of clear communication.
-    </p>
-  </section>
+  <!-- Contact & Socials -->
+  <footer id="contact">
+    <div class="container">
+      <div class="socials-footer">
+        <h2 class="section-title reveal" style="margin-bottom: 2rem;">Let's build something <span
+            class="title-gradient">extraordinary</span>.</h2>
+        <div class="socials-grid reveal">
+          <a href="#" class="social-link" title="LinkedIn"><i data-lucide="linkedin"></i></a>
+          <a href="#" class="social-link" title="GitHub"><i data-lucide="github"></i></a>
+          <a href="#" class="social-link" title="Twitter"><i data-lucide="twitter"></i></a>
+          <a href="mailto:hello@farhan.com" class="social-link" title="Email"><i data-lucide="mail"></i></a>
+        </div>
+        <p class="copyright reveal">&copy; 2026 Farhan. Built with passion and code.</p>
+      </div>
+    </div>
+  </footer>
 
-  <section>
-    <h2>Leadership & Teamwork</h2>
-    <p>
-      As Group Leader, I coordinated tasks, supported teammates during technical challenges, and ensured
-      milestones were met. This experience strengthened my leadership, communication, and teamwork skills.
-    </p>
-  </section>
-
-  <section>
-    <h2>Skills & Tools</h2>
-    <ul>
-      <li>Python, HTML, CSS, JavaScript</li>
-      <li>Flask, Jinja2, Bootstrap</li>
-      <li>SQLite, SQLAlchemy</li>
-      <li>Git & GitHub</li>
-      <li>Agile Development & OOP</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Contact</h2>
-    <p>Email: your_email@email.com</p>
-  </section>
-
+  <!-- Scripts -->
+  <script src="script.js"></script>
 </body>
+
 </html>
