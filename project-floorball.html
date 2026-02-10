@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYP Floorball | Project Detail</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .project-hero {
+            padding: 160px 0 100px;
+            background: linear-gradient(180deg, rgba(59, 130, 246, 0.1) 0%, var(--bg) 100%);
+        }
+
+        .project-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin: 4rem 0;
+            padding: 2rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+        }
+
+        .stat-item h4 {
+            color: #3b82f6;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            color: var(--text-high);
+            font-weight: 600;
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            background: var(--surface-light);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature-card i {
+            color: #3b82f6;
+        }
+
+        @media (max-width: 768px) {
+            .project-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .feature-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="scrolled">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">FARHAN<span style="color:var(--primary)">.</span></a>
+            <a href="index.html#projects" class="btn btn-outline" style="padding: 0.5rem 1rem;">Back to Projects</a>
+        </div>
+    </nav>
+
+    <header class="project-hero">
+        <div class="container">
+            <span class="section-tag reveal">Web Development / Sports Tech</span>
+            <h1 class="reveal" style="font-size: 3.5rem; margin-bottom: 1.5rem;">NYP Floorball</h1>
+            <p class="reveal" style="max-width: 800px; font-size: 1.25rem;">Building a high-performance community hub
+                for the Nanyang Polytechnic Floorball team.</p>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="project-stats reveal">
+                <div class="stat-item">
+                    <h4>Role</h4>
+                    <p>Web Developer</p>
+                </div>
+                <div class="stat-item">
+                    <h4>Tech</h4>
+                    <p>HTML, CSS, JS</p>
+                </div>
+                <div class="stat-item">
+                    <h4>Focus</h4>
+                    <p>UI Efficiency</p>
+                </div>
+                <div class="stat-item">
+                    <h4>Timeline</h4>
+                    <p>Semester Project</p>
+                </div>
+            </div>
+
+            <div class="reveal" style="margin-bottom: 6rem;">
+                <h2 class="section-title">The Solution</h2>
+                <p style="font-size: 1.1rem; max-width: 900px;">Providing the NYP Floorball team with a centralized
+                    digital space to track news, player stats, and match schedules. The site prioritizes mobile
+                    responsiveness for athletes on the move.</p>
+            </div>
+
+            <h2 class="section-title reveal">Key Contributions</h2>
+            <div class="feature-list">
+                <div class="feature-card reveal">
+                    <h3><i data-lucide="monitor"></i> Responsive Design</h3>
+                    <p>Implemented a fluid layout using modern CSS techniques, ensuring a seamless experience across
+                        mobile, tablet, and desktop devices.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <h3><i data-lucide="layout"></i> Player Management</h3>
+                    <p>Designed a clean and organized system for displaying player profiles and team rosters with
+                        consistent formatting.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <h3><i data-lucide="zap"></i> Performance Optimization</h3>
+                    <p>Focused on writing clean, efficient code to ensure fast load times and smooth transitions between
+                        sections.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <h3><i data-lucide="link"></i> Social Integration</h3>
+                    <p>Integrated team news feeds and social components to keep the community engaged and informed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="socials-footer">
+        <div class="container">
+            <p class="copyright">&copy; 2026 Farhan. Project Case Study.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

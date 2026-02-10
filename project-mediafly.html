@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediaFly | Project Detail</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .project-hero {
+            padding: 160px 0 100px;
+            background: linear-gradient(180deg, rgba(45, 212, 191, 0.1) 0%, var(--bg) 100%);
+        }
+
+        .project-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin: 4rem 0;
+            padding: 2rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+        }
+
+        .stat-item h4 {
+            color: var(--secondary);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            color: var(--text-high);
+            font-weight: 600;
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            background: var(--surface-light);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature-card i {
+            color: var(--secondary);
+        }
+
+        @media (max-width: 768px) {
+            .project-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .feature-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="scrolled">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">FARHAN<span style="color:var(--primary)">.</span></a>
+            <a href="index.html#projects" class="btn btn-outline" style="padding: 0.5rem 1rem;">Back to Projects</a>
+        </div>
+    </nav>
+
+    <header class="project-hero">
+        <div class="container">
+            <span class="section-tag reveal">iOS Development / UX Research</span>
+            <h1 class="reveal" style="font-size: 3.5rem; margin-bottom: 1.5rem;">MediaFly</h1>
+            <p class="reveal" style="max-width: 800px; font-size: 1.25rem;">Combating teenage loneliness during the
+                COVID-19 pandemic through an intuitive iOS messaging prototype.</p>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="project-stats reveal">
+                <div class="stat-item">
+                    <h4>Role</h4>
+                    <p>Lead Developer</p>
+                </div>
+                <div class="stat-item">
+                    <h4>Demo Venue</h4>
+                    <p>MBS Apple Store</p>
+                </div>
+                <div class="stat-item">
+                    <h4>Team Size</h4>
+                    <p>4 Members</p>
+                </div>
+                <div class="stat-item">
+                    <h4>Tech</h4>
+                    <p>Swift, Keynote, iPad</p>
+                </div>
+            </div>
+
+            <div class="reveal" style="margin-bottom: 6rem;">
+                <h2 class="section-title">Project Vision</h2>
+                <p style="font-size: 1.1rem; max-width: 900px;">MediaFly was designed as a response to social isolation.
+                    The project involved deep user research and rapid prototyping, culminating in a public presentation
+                    at the Apple Store Marina Bay Sands.</p>
+            </div>
+
+            <h2 class="section-title reveal">Key Contributions</h2>
+            <div class="feature-list">
+                <div class="feature-card reveal">
+                    <h3><i data-lucide="smartphone"></i> Swift Prototyping</h3>
+                    <p>Developed a functional prototype using Swift Playgrounds, implementing core messaging features
+                        and real-time interaction flows.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <h3><i data-lucide="layout"></i> UI/UX Design</h3>
+                    <p>Created high-fidelity mock-ups and user flow diagrams, conducting research to ensure features
+                        specifically addressed peer connection needs.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <h3><i data-lucide="presentation"></i> Public Speaking</h3>
+                    <p>Effectively communicated the project vision and social impact during a concept demo at the Apple
+                        Store to instructors and the public.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <h3><i data-lucide="users"></i> Team Leadership</h3>
+                    <p>Led a team of 4 developers, ensuring alignment between design goals and technical prototype
+                        limitations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="socials-footer">
+        <div class="container">
+            <p class="copyright">&copy; 2026 Farhan. Project Case Study.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
