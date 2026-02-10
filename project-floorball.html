@@ -84,9 +84,10 @@
     <header class="project-hero">
         <div class="container hero-grid">
             <div class="hero-content">
-                <span class="section-tag reveal">Web Development / Sports Tech</span>
+                <span class="section-tag reveal">NYP Academic Project / UX Design</span>
                 <h1 class="reveal" style="font-size: 3.5rem; margin-bottom: 1.5rem;">NYP Floorball</h1>
-                <p class="reveal">Building a high-performance community hub for the Nanyang Polytechnic Floorball team.
+                <p class="reveal">A specialized recruitment platform designed to showcase the Nanyang Polytechnic
+                    Floorball CCA and drive student enrollment.
                 </p>
             </div>
             <div class="hero-img-placeholder">
@@ -97,28 +98,39 @@
         </div>
     </header>
 
-    <section>
+    <section class="carousel-container reveal">
         <div class="container">
-            <div class="visual-grid reveal">
-                <div class="visual-item">
-                    <div class="media-placeholder" style="aspect-ratio: 9/16;">
-                        <img src="static/images/project-floorball/hero.png" alt="Floorball Hero Image">
-                        <p>Mobile Responsive View</p>
+            <h2 class="section-title">Interface & Experience</h2>
+
+            <div class="carousel-viewport">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-card">
+                        <img src="static/floorball1.png" alt="Login Screen" class="carousel-img">
+
                     </div>
-                </div>
-                <div class="visual-item">
-                    <div class="media-placeholder">
-                        <i data-lucide="users"></i>
-                        <p>Player Profiles UI Screenshot</p>
+
+                    <div class="carousel-card">
+                        <img src="static/floorball2.png" alt="User Dashboard" class="carousel-img">
+
                     </div>
-                </div>
-                <div class="visual-item">
-                    <div class="media-placeholder">
-                        <i data-lucide="calendar"></i>
-                        <p>Match Schedule Layout</p>
+
+                    <div class="carousel-card">
+                        <img src="static/floorball3.png" alt="User Dashboard" class="carousel-img">
+
                     </div>
+
+
                 </div>
+
+                <button class="carousel-btn prev" onclick="scrollCarousel(-1)">
+                    <i data-lucide="chevron-left"></i>
+                </button>
+                <button class="carousel-btn next" onclick="scrollCarousel(1)">
+                    <i data-lucide="chevron-right"></i>
+                </button>
             </div>
+
+
         </div>
     </section>
 
@@ -145,35 +157,58 @@
 
             <div class="reveal" style="margin-bottom: 6rem;">
                 <h2 class="section-title">The Solution</h2>
-                <p style="font-size: 1.1rem; max-width: 900px;">Providing the NYP Floorball team with a centralized
-                    digital space to track news, player stats, and match schedules. The site prioritizes mobile
-                    responsiveness for athletes on the move.</p>
+                <p style="font-size: 1.1rem; max-width: 900px;">Commissioned as a Nanyang Polytechnic assignment, the
+                    goal was to design a compelling digital gateway for the NYP Floorball CCA.
+                    Tasked with boosting student recruitment, I created a vibrant community hub that showcases the
+                    team's competitive spirit,
+                    training culture, and achievements. The website serves as the primary touchpoint for prospective
+                    members to explore player stats
+                    and trial information through a high-performance, mobile-first interface.</p>
             </div>
 
             <h2 class="section-title reveal">Key Contributions</h2>
             <div class="feature-list">
                 <div class="feature-card reveal">
-                    <h3><i data-lucide="monitor"></i> Responsive Design</h3>
-                    <p>Implemented a fluid layout using modern CSS techniques, ensuring a seamless experience across
-                        mobile, tablet, and desktop devices.</p>
+                    <h3><i data-lucide="monitor"></i> Strategic UX</h3>
+                    <p>Designed an engaging interface tailored to NYP students, balancing high-energy visuals with clear
+                        calls-to-action for CCA sign-ups.</p>
                 </div>
                 <div class="feature-card reveal">
-                    <h3><i data-lucide="layout"></i> Player Management</h3>
-                    <p>Designed a clean and organized system for displaying player profiles and team rosters with
-                        consistent formatting.</p>
+                    <h3><i data-lucide="layout"></i> CCA Identity System</h3>
+                    <p>Developed an organized roster system to highlight current players, fostering a sense of team
+                        identity for prospective members.</p>
                 </div>
                 <div class="feature-card reveal">
-                    <h3><i data-lucide="zap"></i> Performance Optimization</h3>
-                    <p>Focused on writing clean, efficient code to ensure fast load times and smooth transitions between
-                        sections.</p>
+                    <h3><i data-lucide="zap"></i> Student-Centric Mobile Design</h3>
+                    <p>Prioritized a seamless mobile experience, acknowledging that the target student demographic
+                        accesses CCA info primarily on the go.</p>
                 </div>
                 <div class="feature-card reveal">
-                    <h3><i data-lucide="link"></i> Social Integration</h3>
-                    <p>Integrated team news feeds and social components to keep the community engaged and informed.</p>
+                    <h3><i data-lucide="link"></i> Engagement Loops</h3>
+                    <p>Integrated news feeds and social components to showcase a thriving community, making the CCA more
+                        approachable to newcomers.</p>
                 </div>
             </div>
         </div>
     </section>
+    <section>
+        <div class="container reveal" style="margin-top: 6rem; margin-bottom: 6rem;">
+            <h2 class="section-title">Reflection & Learning</h2>
+            <ul>
+                <li>Building a recruitment-focused site taught me how to align <strong>design choices with
+                        organizational goals</strong> (increasing CCA membership).</li>
+                <li>Using Bootstrap allowed me to create a <strong>professional-grade landing page</strong> that meets
+                    NYP academic standards.</li>
+                <li>I learned to translate the "energy" of a physical sport into a <strong>digital experience</strong>
+                    through strategic layout and imagery.</li>
+                <li>User testing revealed how students navigate for info, helping me refine the <strong>Information
+                        Architecture</strong> for trial schedules.</li>
+                <li>This project strengthened my ability to act as both a <strong>developer and a digital
+                        storyteller</strong> for the NYP community.</li>
+            </ul>
+        </div>
+    </section>
+
 
     <footer class="socials-footer">
         <div class="container">
