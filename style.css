@@ -428,3 +428,238 @@ nav.scrolled {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Layout for Hero Grid */
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-img-placeholder {
+    width: 100%;
+    aspect-ratio: 16/10;
+    background: var(--surface-light);
+    border-radius: 20px;
+    border: 1px dashed var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Gallery & Video Grid */
+.visual-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 4rem 0;
+}
+
+.visual-item {
+    background: var(--surface);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.media-placeholder {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 20px;
+}
+
+.media-placeholder i {
+    margin-bottom: 10px;
+    opacity: 0.5;
+}
+
+.video-section {
+    margin-top: 4rem;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #000;
+    aspect-ratio: 16/9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+}
+
+@media (max-width: 992px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .visual-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Carousel Styling */
+.carousel-viewport {
+    position: relative;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-bottom: 1rem;
+    scrollbar-width: none;
+    /* Hide scrollbar for Chrome/Safari */
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar for Chrome/Safari */
+}
+
+.carousel-card {
+    flex: 0 0 800px;
+    /* Width of each card */
+    scroll-snap-align: center;
+    background: var(--surface-light);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--primary);
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s;
+}
+
+.carousel-btn.prev {
+    left: -20px;
+}
+
+.carousel-btn.next {
+    right: -20px;
+}
+
+.carousel-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-50%) scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .carousel-card {
+        flex: 0 0 85%;
+        /* Cards take up more space on mobile */
+    }
+
+    .carousel-btn {
+        display: none;
+    }
+
+    /* Hide buttons on mobile, use touch scroll */
+}
+
+/* Ensure the card has a fixed height and hidden overflow */
+.carousel-card {
+    flex: 0 0 600px;
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    /* Clips the image to the border-radius */
+    display: flex;
+    flex-direction: column;
+    background: var(--surface-light);
+    border: 1px solid var(--border);
+}
+
+/* The magic for images */
+.carousel-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* This makes the image "fit to size" without distortion */
+    object-position: center;
+    /* Keeps the focus on the middle of the photo */
+    display: block;
+}
+
+/* Ensure placeholders also fill the space */
+.carousel-card .media-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 480px) {
+    .carousel-card {
+        flex: 0 0 280px;
+        /* Smaller cards for small phones */
+        height: 250px;
+    }
+}
+
+.video-showcase {
+    margin: 4rem 0;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #000;
+    /* Black bars if video aspect ratio differs */
+    border: 1px solid var(--border);
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.video-showcase video {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 9;
+    /* Change to 9 / 16 if it's a vertical phone recording */
+    object-fit: cover;
+}
+
+.video-caption {
+    padding: 1.5rem;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}

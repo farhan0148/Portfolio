@@ -41,7 +41,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const targetId = this.getAttribute('href');
         const targetElement = document.querySelector(targetId);
-        
+
         if (targetElement) {
             window.scrollTo({
                 top: targetElement.offsetTop - 80,
@@ -50,3 +50,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+function scrollCarousel(direction) {
+    const track = document.getElementById('carouselTrack');
+    const scrollAmount = 424; // Card width (400) + Gap (24)
+    track.scrollBy({
+        left: direction * scrollAmount,
+        behavior: 'smooth'
+    });
+}
+
+// Re-initialize icons if using Lucide
+if (window.lucide) {
+    lucide.createIcons();
+}

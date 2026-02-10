@@ -82,13 +82,63 @@
     </nav>
 
     <header class="project-hero">
-        <div class="container">
-            <span class="section-tag reveal">iOS Development / UX Research</span>
-            <h1 class="reveal" style="font-size: 3.5rem; margin-bottom: 1.5rem;">MediaFly</h1>
-            <p class="reveal" style="max-width: 800px; font-size: 1.25rem;">Combating teenage loneliness during the
-                COVID-19 pandemic through an intuitive iOS messaging prototype.</p>
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="section-tag reveal">iOS Development / UX Research</span>
+                <h1 class="reveal" style="font-size: 3.5rem; margin-bottom: 1.5rem;">MediaFly</h1>
+                <p class="reveal">Combating teenage loneliness through an intuitive iOS messaging prototype.</p>
+            </div>
+            <div class="hero-img-placeholder reveal" style="aspect-ratio: 1/1;">
+                <div class="media-placeholder">
+                    <img src="static/present.jpeg" alt="Presentation Image" class="carousel-img">
+                </div>
+            </div>
         </div>
     </header>
+
+    <section class="carousel-container reveal">
+        <div class="container">
+            <h2 class="section-title">Project Gallery</h2>
+
+            <div class="carousel-viewport">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-card">
+                        <div class="media-placeholder">
+                            <img src="static/code.jpeg" alt="Code Image" class="carousel-img">
+                        </div>
+                    </div>
+                    <div class="carousel-card">
+                        <div class="media-placeholder">
+                            <img src="static/page.jpeg" alt="Page Image" class="carousel-img">
+                        </div>
+                    </div>
+                    <div class="carousel-card">
+                        <img src="static/group.jpeg" alt="Group Image" class="carousel-img">
+                    </div>
+                </div>
+
+                <button class="carousel-btn prev" onclick="scrollCarousel(-1)"><i
+                        data-lucide="chevron-left"></i></button>
+                <button class="carousel-btn next" onclick="scrollCarousel(1)"><i
+                        data-lucide="chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+    <section class="reveal">
+        <div class="container">
+            <h2 class="section-title">App Interaction Demo</h2>
+            <div class="video-showcase">
+                <video controls poster="static/video-thumbnail.jpg">
+                    <source src="static/video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-caption">
+                    <i data-lucide="play-circle" style="color: var(--secondary);"></i>
+                    <p style="margin: 0; font-weight: 500;">Walkthrough: Swift Playgrounds Prototyping & User Flow</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section>
         <div class="container">
