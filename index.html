@@ -13,6 +13,43 @@
 
   <!-- Scripts -->
   <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .profile-photo {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--primary);
+      box-shadow: 0 20px 60px rgba(124, 58, 237, 0.3);
+    }
+
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .profile-photo {
+        margin: 0 auto 2rem;
+      }
+
+      .hero-content {
+        order: 2;
+      }
+
+      .profile-photo-container {
+        order: 1;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -33,19 +70,25 @@
 
   <!-- Hero Section -->
   <section id="home" class="hero">
-    <div class="container hero-content">
-      <span class="section-tag reveal" style="margin-bottom: 1.5rem;">Business & Financial Technology student at
-        NYP</span>
-      <h1 class="reveal">Engineering <span class="title-gradient"> Digital Solutions</span> for Real-World Challenges.
-      </h1>
-      <p class="reveal">I'm Farhan, a final-year student at Nanyang Polytechnic specializing in backend-driven
-        applications and human-centric digital solutions. </p>
-      <div class="cta-group reveal">
-        <a href="#projects" class="btn btn-primary">Featured Work</a>
-        <a href="Farhan_Resume.docx" download class="btn btn-outline"
-          style="display: inline-flex; align-items: center; gap: 8px;">
-          <i data-lucide="download" style="width: 18px;"></i> Download CV
-        </a>
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="section-tag reveal" style="margin-bottom: 1.5rem;">Business & Financial Technology student at
+          NYP</span>
+        <h1 class="reveal">Engineering <span class="title-gradient"> Digital Solutions</span> for Real-World Challenges.
+        </h1>
+        <p class="reveal">I'm Farhan, a final-year student at Nanyang Polytechnic specializing in backend-driven
+          applications and human-centric digital solutions. </p>
+        <div class="cta-group reveal">
+          <a href="#projects" class="btn btn-primary">Featured Work</a>
+          <a href="Farhan_Resume.docx" download class="btn btn-outline"
+            style="display: inline-flex; align-items: center; gap: 8px;">
+            <i data-lucide="download" style="width: 18px;"></i> Download CV
+          </a>
+        </div>
+      </div>
+
+      <div class="profile-photo-container reveal">
+        <img src="static/pro2.jpeg" alt="Farhan Profile Photo" class="profile-photo">
       </div>
     </div>
   </section>
@@ -140,8 +183,8 @@
           </div>
           <div class="project-info">
             <span class="project-category">UX Design / NYP Academic Project </span>
-            <h3>NYP Floorball</h3>
-            <p>Official website for the Nanyang Polytechnic Floorball team, featuring team news, schedules, and player
+            <h3>NYP Floorball Website</h3>
+            <p>Prototype website for the Nanyang Polytechnic Floorball team, featuring team news, schedules, and player
               profiles for the local sports community.</p>
             <div class="tag-group" style="margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; gap: 5px;">
               <span
