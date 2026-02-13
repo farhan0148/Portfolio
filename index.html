@@ -49,6 +49,44 @@
         order: 1;
       }
     }
+    /* This adds space at the top of the page so the content isn't cramped */
+.hero {
+  padding-top: 160px; /* Adjust this number to push content further down */
+  padding-bottom: 80px;
+}
+
+/* Optional: If you want to ensure the navbar doesn't overlap on mobile */
+@media (max-width: 992px) {
+  .hero {
+    padding-top: 120px;
+  }
+}
+/* 1. Define the navbar height so you can reuse it */
+:root {
+  --nav-height: 80px; 
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-height);
+  z-index: 1000;
+  background-color: var(--surface); /* Make sure this isn't transparent! */
+}
+
+/* 2. Fix the "Cut Off" issue here */
+.hero {
+  /* Use padding-top to push the content below the navbar */
+  padding-top: var(--nav-height); 
+  
+  /* Use flexbox to center content vertically in the remaining space */
+  display: flex;
+  align-items: center; 
+  min-height: 100vh; 
+  box-sizing: border-box; /* Ensures padding doesn't break the layout */
+}
   </style>
 </head>
 
