@@ -49,44 +49,49 @@
         order: 1;
       }
     }
+
     /* This adds space at the top of the page so the content isn't cramped */
-.hero {
-  padding-top: 160px; /* Adjust this number to push content further down */
-  padding-bottom: 80px;
-}
+    .hero {
+      padding-top: 160px;
+      /* Adjust this number to push content further down */
+      padding-bottom: 80px;
+    }
 
-/* Optional: If you want to ensure the navbar doesn't overlap on mobile */
-@media (max-width: 992px) {
-  .hero {
-    padding-top: 120px;
-  }
-}
-/* 1. Define the navbar height so you can reuse it */
-:root {
-  --nav-height: 80px; 
-}
+    /* Optional: If you want to ensure the navbar doesn't overlap on mobile */
+    @media (max-width: 992px) {
+      .hero {
+        padding-top: 120px;
+      }
+    }
 
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: var(--nav-height);
-  z-index: 1000;
-  background-color: var(--surface); /* Make sure this isn't transparent! */
-}
+    /* 1. Define the navbar height so you can reuse it */
+    :root {
+      --nav-height: 80px;
+    }
 
-/* 2. Fix the "Cut Off" issue here */
-.hero {
-  /* Use padding-top to push the content below the navbar */
-  padding-top: var(--nav-height); 
-  
-  /* Use flexbox to center content vertically in the remaining space */
-  display: flex;
-  align-items: center; 
-  min-height: 100vh; 
-  box-sizing: border-box; /* Ensures padding doesn't break the layout */
-}
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: var(--nav-height);
+      z-index: 1000;
+      background-color: var(--surface);
+      /* Make sure this isn't transparent! */
+    }
+
+    /* 2. Fix the "Cut Off" issue here */
+    .hero {
+      /* Use padding-top to push the content below the navbar */
+      padding-top: var(--nav-height);
+
+      /* Use flexbox to center content vertically in the remaining space */
+      display: flex;
+      align-items: center;
+      min-height: 100vh;
+      box-sizing: border-box;
+      /* Ensures padding doesn't break the layout */
+    }
   </style>
 </head>
 
@@ -139,7 +144,11 @@ nav {
       <div class="section-header reveal">
         <span class="section-tag">About Me</span>
         <h2 class="section-title">Bridging Tech with Human Needs</h2>
-        <p style="max-width: 750px; font-size: 1.1rem;">Currently pursuing a Diploma in Business & Financial Technology at Nanyang Polytechnic, I specialise in building <strong style="color: var(--primary);">user-facing web applications</strong> with strong backend foundations. I have led diverse teams in developing full-stack platforms and mobile prototypes, including projects presented at Marina Bay Sands, demonstrating my ability to deliver <strong style="color: var(--primary);">scalable, human-centric digital solutions</strong>.</p>
+        <p style="max-width: 750px; font-size: 1.1rem;">Currently pursuing a Diploma in Business & Financial Technology
+          at Nanyang Polytechnic, I specialise in building <strong style="color: var(--primary);">user-facing web
+            applications</strong> with strong backend foundations. I have led diverse teams in developing full-stack
+          platforms and mobile prototypes, including projects presented at Marina Bay Sands, demonstrating my ability to
+          deliver <strong style="color: var(--primary);">scalable, human-centric digital solutions</strong>.</p>
       </div>
     </div>
   </section>
@@ -255,7 +264,49 @@ nav {
           </div>
         </article>
 
+        <!-- Project 4: PolyFinTech100 API Hackathon -->
+        <article class="project-card reveal">
+          <div class="project-image">
+            <img src="static/polyfintech100.svg" alt="PolyFinTech100 API Hackathon">
+          </div>
+          <div class="project-info">
+            <span class="project-category">PolyFinTech100 API Hackathon / Innovation Challenge</span>
+            <h3>PRUNavigator</h3>
+            <p>Built a fintech-focused prototype using public APIs to address a real-world problem with rapid
+              prototyping, clean UI, and practical functionality.</p>
+            <div class="tag-group" style="margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; gap: 5px;">
+              <span
+                style="font-size: 0.7rem; padding: 2px 8px; background: var(--surface-light); border-radius: 4px;">API
+                Integration</span>
+              <span
+                style="font-size: 0.7rem; padding: 2px 8px; background: var(--surface-light); border-radius: 4px;">Fintech</span>
+            </div>
+            <a href="project-polyfintech100.html" class="btn btn-outline"
+              style="padding: 0.5rem 1rem; font-size: 0.8rem; width: 100%; text-align: center;">View Case Study</a>
+          </div>
+        </article>
 
+        <!-- Project 5: Market Strategy & Data Analytics -->
+        <article class="project-card reveal">
+          <div class="project-image">
+            <img src="static/ADA-Main.png" alt="Market Strategy & Data Analytics">
+          </div>
+          <div class="project-info">
+            <span class="project-category">AI & Data Analytics / Group Project</span>
+            <h3>Market Strategy & Data Analytics</h3>
+            <p>Built a Power BI Market Attractiveness Index ranking 13 countries using DAX-powered multi-variable
+              trade-off analysis to identify the optimal market entry sequence.</p>
+            <div class="tag-group" style="margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; gap: 5px;">
+              <span
+                style="font-size: 0.7rem; padding: 2px 8px; background: var(--surface-light); border-radius: 4px;">Power
+                BI</span>
+              <span
+                style="font-size: 0.7rem; padding: 2px 8px; background: var(--surface-light); border-radius: 4px;">DAX</span>
+            </div>
+            <a href="project-dataanalytics.html" class="btn btn-outline"
+              style="padding: 0.5rem 1rem; font-size: 0.8rem; width: 100%; text-align: center;">View Case Study</a>
+          </div>
+        </article>
 
       </div>
     </div>
@@ -265,44 +316,87 @@ nav {
   <section id="skills">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">Tech Stack</span>
-        <h2 class="section-title">Tools & Skills</h2>
+        <span class="section-tag">Tech Stack &amp; Soft Skills</span>
+        <h2 class="section-title">Tools &amp; Skills</h2>
       </div>
 
-      <div class="skills-container reveal">
+      <!-- Technical -->
+      <div class="reveal" style="margin-bottom: 0.5rem;">
+        <p
+          style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary); font-weight: 600; margin-bottom: 1.25rem;">
+          Technical</p>
+      </div>
+      <div class="skills-container reveal" style="margin-bottom: 3rem;">
         <div class="skill-item">
-          <div class="skill-icon"><i data-lucide="code-2"></i></div>
-          <span>Python</span>
+          <div class="skill-icon"><i data-lucide="code-2"></i></div><span>Python</span>
         </div>
         <div class="skill-item">
-          <div class="skill-icon"><i data-lucide="layout"></i></div>
-          <span>Flask</span>
+          <div class="skill-icon"><i data-lucide="terminal"></i></div><span>JavaScript (ES6)</span>
         </div>
         <div class="skill-item">
-          <div class="skill-icon"><i data-lucide="database"></i></div>
-          <span>SQLite</span>
+          <div class="skill-icon"><i data-lucide="layers"></i></div><span>HTML5 / CSS3</span>
         </div>
         <div class="skill-item">
-          <div class="skill-icon"><i data-lucide="layers"></i></div>
-          <span>HTML/CSS</span>
+          <div class="skill-icon"><i data-lucide="database"></i></div><span>SQL</span>
         </div>
         <div class="skill-item">
-          <div class="skill-icon"><i data-lucide="terminal"></i></div>
-          <span>JavaScript</span>
+          <div class="skill-icon"><i data-lucide="layout"></i></div><span>Flask</span>
         </div>
         <div class="skill-item">
-          <div class="skill-icon"><i data-lucide="git-branch"></i></div>
-          <span>Git / GitHub</span>
+          <div class="skill-icon"><i data-lucide="box"></i></div><span>Jinja2</span>
         </div>
         <div class="skill-item">
-          <div class="skill-icon"><i data-lucide="users"></i></div>
-          <span>Agile</span>
+          <div class="skill-icon"><i data-lucide="grid"></i></div><span>Bootstrap</span>
         </div>
         <div class="skill-item">
-          <div class="skill-icon"><i data-lucide="shield-check"></i></div>
-          <span>Security</span>
+          <div class="skill-icon"><i data-lucide="database"></i></div><span>SQLite / MySQL</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><i data-lucide="leaf"></i></div><span>MongoDB</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><i data-lucide="git-branch"></i></div><span>Git / GitHub</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><i data-lucide="users"></i></div><span>Agile / Scrum</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><i data-lucide="lightbulb"></i></div><span>OOP</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><i data-lucide="bar-chart-2"></i></div><span>Power BI / DAX</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><i data-lucide="cpu"></i></div><span>React.js</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><i data-lucide="shield-check"></i></div><span>SQLAlchemy</span>
         </div>
       </div>
+
+      <!-- Soft Skills -->
+      <div class="reveal" style="margin-bottom: 0.5rem;">
+        <p
+          style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary); font-weight: 600; margin-bottom: 1.25rem;">
+          Soft Skills</p>
+      </div>
+      <div class="skills-container reveal" style="margin-bottom: 3rem;">
+        <div class="skill-item">
+          <div class="skill-icon"><i data-lucide="users"></i></div><span>Collaborative Teamwork</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><i data-lucide="message-circle"></i></div><span>Communication</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><i data-lucide="compass"></i></div><span>Strategic Problem-Solving</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><i data-lucide="refresh-cw"></i></div><span>Adaptability</span>
+        </div>
+      </div>
+
+
+
     </div>
   </section>
 
@@ -314,10 +408,25 @@ nav {
             class="title-gradient">extraordinary</span>.</h2>
         <div class="socials-grid reveal">
           <a href="mailto:muhd.farhan01408@gmail.com" class="social-link" title="Email"><i data-lucide="mail"></i></a>
-          <a href="https://www.linkedin.com/in/muhammad-farhan-b3b649332/" class="social-link" target="_blank"
-            title="LinkedIn"><i data-lucide="linkedin"></i></a>
-          <a href="https://github.com/farhan0148" class="social-link" target="_blank" title="GitHub"><i
-              data-lucide="github"></i></a>
+          <a href="https://www.linkedin.com/in/muhammad-farhan-b3b649332/" class="social-link" title="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-linkedin">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect width="4" height="12" x="2" y="9"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a href="https://github.com/farhan0148" class="social-link" title="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-github">
+              <path
+                d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3-.3 6-1.5 6-6.5a5.5 5.5 0 0 0-1.5-3.8 5.5 5.5 0 0 0-.1-3.8s-1.2-.4-3.9 1.4a12.8 12.8 0 0 0-7 0C6.2 1.4 5 1.8 5 1.8a5.5 5.5 0 0 0-.1 3.8A5.5 5.5 0 0 0 3 9.4c0 5 3 6.2 6 6.5a4.8 4.8 0 0 0-1 3.2v4">
+              </path>
+              <path d="M9 18c-4.5 1.5-5-2.5-7-3"></path>
+            </svg>
+          </a>
         </div>
         <p class="copyright reveal">&copy; 2026 Farhan. Built with passion and code.</p>
       </div>
