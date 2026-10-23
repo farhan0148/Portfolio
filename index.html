@@ -28,7 +28,17 @@
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid var(--primary);
-      box-shadow: 0 20px 60px rgba(124, 58, 237, 0.3);
+      box-shadow: 0 20px 60px rgba(124, 58, 237, 0.35);
+    }
+
+    /* Fixed top space so navbar never cuts off content */
+    .hero {
+      padding-top: 130px;
+      padding-bottom: 80px;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
     }
 
     @media (max-width: 992px) {
@@ -48,49 +58,16 @@
       .profile-photo-container {
         order: 1;
       }
-    }
 
-    /* This adds space at the top of the page so the content isn't cramped */
-    .hero {
-      padding-top: 160px;
-      /* Adjust this number to push content further down */
-      padding-bottom: 80px;
-    }
-
-    /* Optional: If you want to ensure the navbar doesn't overlap on mobile */
-    @media (max-width: 992px) {
       .hero {
-        padding-top: 120px;
+        padding-top: 110px;
+        padding-bottom: 60px;
+        min-height: auto;
       }
-    }
 
-    /* 1. Define the navbar height so you can reuse it */
-    :root {
-      --nav-height: 80px;
-    }
-
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: var(--nav-height);
-      z-index: 1000;
-      background-color: var(--surface);
-      /* Make sure this isn't transparent! */
-    }
-
-    /* 2. Fix the "Cut Off" issue here */
-    .hero {
-      /* Use padding-top to push the content below the navbar */
-      padding-top: var(--nav-height);
-
-      /* Use flexbox to center content vertically in the remaining space */
-      display: flex;
-      align-items: center;
-      min-height: 100vh;
-      box-sizing: border-box;
-      /* Ensures padding doesn't break the layout */
+      .cta-group {
+        justify-content: center;
+      }
     }
   </style>
 </head>
@@ -178,6 +155,20 @@
         </div>
 
         <div class="timeline-item"
+          style="margin-bottom: 3rem; border-left: 2px solid rgba(20, 184, 166, 0.6); padding-left: 2rem; position: relative;">
+          <div
+            style="position: absolute; left: -9px; top: 0; width: 16px; height: 16px; border-radius: 50%; background: #2dd4bf;">
+          </div>
+          <span style="color: #2dd4bf; font-weight: 600; font-size: 0.9rem;">2026 &bull; CCA Project</span>
+          <h3 style="margin: 0.5rem 0;">Web Developer & AI Lead</h3>
+          <p style="color: var(--text-high); font-weight: 500;">Founders Club (Entrepreneurship CCA)</p>
+          <ul style="margin-top: 1rem; color: var(--text-low); font-size: 0.95rem;">
+            <li>Co-led a ground-up platform redesign showcasing student entrepreneur alumni and club activities.</li>
+            <li>Engineered an interactive Open House AI advisor using Groq API (14K req/day) to match prospects with schools and validate startup ideas.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item"
           style="border-left: 2px solid var(--border); padding-left: 2rem; position: relative;">
           <div
             style="position: absolute; left: -9px; top: 0; width: 16px; height: 16px; border-radius: 50%; background: var(--border);">
@@ -203,6 +194,58 @@
       </div>
 
       <div class="projects-grid">
+        <!-- Project 0: CompeteNow (Flagship Production App) -->
+        <article class="project-card reveal" style="border-color: rgba(124, 58, 237, 0.4); box-shadow: 0 10px 30px rgba(124, 58, 237, 0.15);">
+          <div class="project-image">
+            <img src="static/competenow-main.png" alt="CompeteNow Tinder-Style Hackathon Platform">
+          </div>
+          <div class="project-info">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 8px;">
+              <span class="project-category" style="margin-bottom: 0;">Production App / Google Cloud Run</span>
+              <span class="production-badge"><span class="production-badge-pulse"></span> Live in Prod</span>
+            </div>
+            <h3>CompeteNow</h3>
+            <p>Tinder-inspired matchmaking web app for hackathons and student competitions. Built with Google AI Studio and Gemini API keys to scout live competitions and match students with high-impact opportunities.</p>
+            <div class="tag-group" style="margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; gap: 5px;">
+              <span style="font-size: 0.7rem; padding: 2px 8px; background: rgba(124, 58, 237, 0.2); color: #c084fc; border-radius: 4px; font-weight: 600;">Gemini AI API</span>
+              <span style="font-size: 0.7rem; padding: 2px 8px; background: var(--surface-light); border-radius: 4px;">AI Studio</span>
+              <span style="font-size: 0.7rem; padding: 2px 8px; background: var(--surface-light); border-radius: 4px;">Cloud Run</span>
+              <span style="font-size: 0.7rem; padding: 2px 8px; background: var(--surface-light); border-radius: 4px;">React</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+              <a href="project-competenow.html" class="btn btn-outline"
+                style="padding: 0.5rem 0.75rem; font-size: 0.8rem; text-align: center;">Case Study</a>
+              <a href="https://competenow-602470605842.asia-east1.run.app/#swipe" target="_blank" rel="noopener noreferrer" class="btn btn-primary"
+                style="padding: 0.5rem 0.75rem; font-size: 0.8rem; text-align: center; display: inline-flex; align-items: center; justify-content: center; gap: 4px;">
+                <i data-lucide="external-link" style="width: 14px;"></i> Live App
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project: Founders Club (CCA Ground-Up Redesign & Groq AI) -->
+        <article class="project-card reveal" style="border-color: rgba(234, 88, 12, 0.35); box-shadow: 0 10px 30px rgba(234, 88, 12, 0.12);">
+          <div class="project-image">
+            <img src="static/NYPFC MAIN.png" alt="Founders Club Website Redesign & Groq AI">
+          </div>
+          <div class="project-info">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 8px;">
+              <span class="project-category" style="margin-bottom: 0;">CCA Platform / Ground-Up Redesign</span>
+              <span style="font-size: 0.72rem; padding: 2px 8px; border-radius: 999px; background: rgba(234, 88, 12, 0.15); border: 1px solid rgba(234, 88, 12, 0.35); color: #fb923c; font-weight: 600;">Open House Edition</span>
+            </div>
+            <h3>Founders Club & AI Advisor</h3>
+            <p>Redesigned the official student entrepreneurship club website from scratch with a friend. Features alumni stories, events, and a Groq AI Open House advisor that matches prospective students to diplomas and challenges startup ideas with lean, real-world validation before writing code.</p>
+            <div class="tag-group" style="margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; gap: 5px;">
+              <span style="font-size: 0.7rem; padding: 2px 8px; background: rgba(249, 115, 22, 0.15); color: #fb923c; border-radius: 4px; font-weight: 600;">Groq AI (14K Free Req)</span>
+              <span style="font-size: 0.7rem; padding: 2px 8px; background: rgba(234, 88, 12, 0.15); color: #fb923c; border-radius: 4px; font-weight: 600;">Open House Kiosk</span>
+              <span style="font-size: 0.7rem; padding: 2px 8px; background: var(--surface-light); border-radius: 4px;">JavaScript</span>
+              <span style="font-size: 0.7rem; padding: 2px 8px; background: var(--surface-light); border-radius: 4px;">Editorial UI/UX</span>
+            </div>
+            <a href="project-foundersclub.html" class="btn btn-outline"
+              style="padding: 0.5rem 1rem; font-size: 0.8rem; width: 100%; text-align: center;">View Case Study</a>
+          </div>
+        </article>
+
         <!-- Project 1: WDP -->
         <article class="project-card reveal">
           <div class="project-image">
@@ -367,6 +410,12 @@
         </div>
         <div class="skill-item">
           <div class="skill-icon"><i data-lucide="bar-chart-2"></i></div><span>Power BI / DAX</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><i data-lucide="sparkles"></i></div><span>Google Gemini API</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><i data-lucide="cloud"></i></div><span>Google Cloud Run</span>
         </div>
         <div class="skill-item">
           <div class="skill-icon"><i data-lucide="cpu"></i></div><span>React.js</span>

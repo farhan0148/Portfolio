@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Founders Club | AI-Powered CCA Platform & Open House Advisor</title>
+  <meta name="description"
+    content="Redesigned CCA platform for Founders Club from the ground up, featuring entrepreneur alumni stories, club events, testimonials, and a Groq-powered AI Open House advisor.">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .project-hero {
+      background: linear-gradient(180deg, rgba(234, 88, 12, 0.12) 0%, rgba(245, 158, 11, 0.05) 60%, var(--bg) 100%);
+    }
+
+    .cca-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(234, 88, 12, 0.12);
+      border: 1px solid rgba(234, 88, 12, 0.35);
+      color: #fb923c;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .groq-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, rgba(234, 88, 12, 0.15), rgba(245, 158, 11, 0.15));
+      border: 1px solid rgba(234, 88, 12, 0.4);
+      color: #fb923c;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .hero-mockup-frame {
+      position: relative;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 10px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4), 0 0 30px rgba(234, 88, 12, 0.15);
+    }
+
+    .hero-mockup-frame img {
+      width: 100%;
+      border-radius: 20px;
+      display: block;
+      object-fit: cover;
+    }
+
+    .ai-highlight-card {
+      background: linear-gradient(135deg, rgba(20, 184, 166, 0.08) 0%, rgba(99, 102, 241, 0.08) 100%);
+      border: 1px solid rgba(20, 184, 166, 0.3);
+      border-radius: 16px;
+      padding: 2rem;
+      margin: 2.5rem 0;
+    }
+
+    .flow-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .flow-step {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      position: relative;
+    }
+
+    .flow-number {
+      display: inline-flex;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      background: var(--primary);
+      color: white;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="scrolled">
+    <div class="container nav-content">
+      <a href="index.html" class="logo">FARHAN<span style="color:var(--primary)">.</span></a>
+      <a href="index.html#projects" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Back to Projects</a>
+    </div>
+  </nav>
+
+  <header class="project-hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="cca-badge reveal">
+          <i data-lucide="sparkles" style="width: 14px; height: 14px;"></i> CCA Ground-Up Redesign &bull; Groq AI
+        </div>
+        <span class="section-tag reveal">Founders Club &bull; Open House Edition</span>
+        <h1 class="reveal" style="font-size: clamp(2.2rem, 5vw, 3.5rem); margin-bottom: 1.25rem;">Founders Club Redesign & AI Advisor</h1>
+        <p class="reveal" style="max-width: 600px; font-size: 1.15rem; color: var(--text-low); line-height: 1.6;">
+          Re-architected the official club website from scratch alongside a peer, showcasing entrepreneur alumni testimonials and events — supercharged with high-speed Groq AI to match Open House prospects with the right school and guide their early startup ideation.
+        </p>
+
+        <div class="hero-actions reveal" style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; margin-top: 2rem;">
+          <span class="groq-pill"><i data-lucide="zap" style="width: 14px; height: 14px;"></i> 14K Req/Day Free Tier Optimized</span>
+          <span class="groq-pill" style="border-color: rgba(45, 212, 191, 0.4); color: #2dd4bf;"><i data-lucide="cpu" style="width: 14px; height: 14px;"></i> Groq Llama High-Speed Inference</span>
+        </div>
+      </div>
+
+      <div class="hero-image-container reveal">
+        <div class="hero-mockup-frame">
+          <img src="static/NYPFC MAIN.png" alt="NYPFC Founders Club Main Platform">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Carousel Section: Interface & AI Experience -->
+  <section class="carousel-container reveal" style="padding-top: 2rem;">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <span class="section-tag">Platform Showcase</span>
+        <h2 class="section-title">Interface &amp; Experience</h2>
+        <p style="max-width: 700px; color: var(--text-low); font-size: 1.05rem;">
+          Explore the newly redesigned Founders Club interface, featuring the Groq-powered AI Open House advisor and interactive community features.
+        </p>
+      </div>
+
+      <div class="carousel-viewport">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-card">
+            <img src="static/NYPFCAI (1).png" alt="NYPFC Groq AI Advisor Interface" class="carousel-img">
+          </div>
+          <div class="carousel-card">
+            <img src="static/NYPFC COOKING.png" alt="NYPFC Club Experience & Feature Development" class="carousel-img">
+          </div>
+          <div class="carousel-card">
+            <img src="static/NYPFC MAIN.png" alt="NYPFC Main Website Overview" class="carousel-img">
+          </div>
+        </div>
+
+        <button class="carousel-btn prev" onclick="scrollCarousel(-1)" aria-label="Previous Slide">
+          <i data-lucide="chevron-left"></i>
+        </button>
+        <button class="carousel-btn next" onclick="scrollCarousel(1)" aria-label="Next Slide">
+          <i data-lucide="chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="project-stats reveal">
+        <div class="stat-item">
+          <h4>Role</h4>
+          <p>Co-Developer & AI Lead</p>
+        </div>
+        <div class="stat-item">
+          <h4>Collaboration</h4>
+          <p>2 Developers (Ground-Up Build)</p>
+        </div>
+        <div class="stat-item">
+          <h4>Club</h4>
+          <p>Founders Club CCA</p>
+        </div>
+        <div class="stat-item">
+          <h4>Core Tech</h4>
+          <p>Groq API, Python, JavaScript, HTML5/CSS3</p>
+        </div>
+      </div>
+
+      <div class="reveal" style="margin-bottom: 3.5rem;">
+        <h2 class="section-title">Project Background & The Mission</h2>
+        <p style="font-size: 1.1rem; max-width: 900px; color: var(--text-low); line-height: 1.7;">
+          Founders Club is a student entrepreneurship hub dedicated to grooming future innovators and founders. The previous digital presence needed a complete overhaul to authentically reflect the club’s vibrancy, showcase proven alumni success stories, and engage prospective students during school outreach events.
+        </p>
+        <p style="font-size: 1.1rem; max-width: 900px; color: var(--text-low); line-height: 1.7; margin-top: 1rem;">
+          Together with a friend, we redesigned and rebuilt the platform from the ground up, pairing modern community UI with an intelligent interactive assistant tailored for the upcoming Open House.
+        </p>
+      </div>
+
+      <!-- AI Twist Section -->
+      <div class="ai-highlight-card reveal">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.75rem;">
+          <i data-lucide="bot" style="color: #2dd4bf; width: 28px; height: 28px;"></i>
+          <h2 style="margin: 0; font-size: 1.6rem; color: var(--text-high);">The Open House AI Twist: School Matcher & Pragmatic Ideator</h2>
+        </div>
+        <p style="color: var(--text-low); font-size: 1.05rem; line-height: 1.7; max-width: 850px;">
+          Rather than just a static brochure, we introduced an interactive AI advisor designed to directly consult prospective students at the Open House booth. Powered by Groq’s ultrafast inference engine (leveraging the 14,000 daily free API requests), the AI gives students authentic, grounded startup coaching:
+        </p>
+
+        <div class="flow-grid">
+          <div class="flow-step">
+            <span class="flow-number">1</span>
+            <h3 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Aspiration & School Matcher</h3>
+            <p style="font-size: 0.95rem; color: var(--text-low); line-height: 1.5;">
+              Prospects share their natural interests and career aspirations. The model recommends which academic school or diploma track best fits their trajectory.
+            </p>
+          </div>
+
+          <div class="flow-step">
+            <span class="flow-number">2</span>
+            <h3 style="margin-bottom: 0.5rem; font-size: 1.1rem;">The Twist: Grounded Idea Validation</h3>
+            <p style="font-size: 0.95rem; color: var(--text-low); line-height: 1.5;">
+              When students pitch their dream business concept, the AI doesn't just praise them blindly. Instead, it challenges them with practical validation: <em>"Not everything needs to be an app on day one."</em>
+            </p>
+          </div>
+
+          <div class="flow-step">
+            <span class="flow-number">3</span>
+            <h3 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Actionable Real-World Steps</h3>
+            <p style="font-size: 0.95rem; color: var(--text-low); line-height: 1.5;">
+              It prescribes lean, immediate experiments before writing code. For example, if someone pitches a <em>Study Buddy app</em>, the AI advises: <strong>"Before building an app, call up classmates, exchange notes, and test if peers actually study together consistently."</strong>
+            </p>
+          </div>
+        </div>
+
+        <div style="margin-top: 1.5rem; padding: 1.25rem; border-radius: 10px; background: rgba(20, 184, 166, 0.08); border-left: 3px solid #2dd4bf;">
+          <p style="margin: 0; font-size: 0.95rem; color: var(--text-high); line-height: 1.6;">
+            💡 <strong>Why this matters:</strong> It teaches young aspiring founders the lean startup mindset early — validating real demand with human interactions first before spending months building software that nobody asked for.
+          </p>
+        </div>
+      </div>
+
+      <h2 class="section-title reveal">Key Platform Pillars</h2>
+      <div class="feature-list" style="margin-bottom: 4rem;">
+        <div class="feature-card reveal">
+          <h3><i data-lucide="zap"></i> Groq API Integration</h3>
+          <p>Integrated Groq's high-throughput LPU inference API. Capitalized on the 14,000 daily requests free quota to deliver instantaneous, zero-lag responses without incurring operational costs for the student club.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <h3><i data-lucide="quote"></i> Founder Testimonial Hub</h3>
+          <p>Curated showcase highlighting authentic journeys of past club members and student entrepreneurs ("preneurs") who launched businesses, won hackathons, and accessed seed support.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <h3><i data-lucide="calendar"></i> Events & Workshops Radar</h3>
+          <p>Clean event feed spotlighting upcoming networking nights, pitch clinics, founder fireside chats, and incubation workshops for active members and prospective recruits.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <h3><i data-lucide="palette"></i> Warm Editorial &amp; Kiosk UX</h3>
+          <p>Crafted a warm, welcoming editorial design featuring an inviting cream-and-terracotta palette, bold headline typography (<em>"Where NYP's Boldest Begin"</em>), student collaboration photography, and an approachable interactive kiosk experience for Open House visitors.</p>
+        </div>
+      </div>
+
+      <div class="reveal" style="margin-bottom: 6rem;">
+        <h2 class="section-title">Key Takeaways & Impact</h2>
+        <ul style="max-width: 900px; font-size: 1.05rem; line-height: 1.8; color: var(--text-low);">
+          <li>
+            <strong style="color: var(--text-high);">Collaborative Pair Engineering:</strong> Redesigning from the ground up reinforced strong front-end conventions, component modularity, and smooth Git workflows between two developers.
+          </li>
+          <li>
+            <strong style="color: var(--text-high);">Cost-Effective AI Architecture:</strong> Selected Groq strategically to harness near-instant latency and high-volume limits (14K req/day), creating an enterprise-grade experience on a student club budget.
+          </li>
+          <li>
+            <strong style="color: var(--text-high);">Interactive Open House Engagement:</strong> Transformed what would have been a passive reading experience into an active, consultative touchpoint where prospects discover their future academic and entrepreneurial path.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="socials-footer">
+    <div class="container">
+      <p class="copyright">&copy; 2026 Farhan. Project Case Study.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+  </script>
+</body>
+
+</html>

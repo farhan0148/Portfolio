@@ -96,15 +96,21 @@ nav {
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 1.5rem 0;
+    padding: 1.1rem 0;
+    background: rgba(10, 10, 15, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     transition: all 0.3s ease;
 }
 
 nav.scrolled {
-    background: var(--glass);
-    backdrop-filter: blur(12px);
+    background: rgba(10, 10, 15, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border);
-    padding: 1rem 0;
+    padding: 0.75rem 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .nav-content {
@@ -141,7 +147,9 @@ nav.scrolled {
 
 /* --- Hero Section --- */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
+    padding-top: 110px;
+    padding-bottom: 60px;
     display: flex;
     align-items: center;
     position: relative;
@@ -400,8 +408,22 @@ nav.scrolled {
 }
 
 @media (max-width: 768px) {
+    nav {
+        padding: 0.85rem 0;
+    }
+
+    nav.scrolled {
+        padding: 0.65rem 0;
+    }
+
     .nav-links {
         display: none;
+    }
+
+    .hero {
+        padding-top: 100px;
+        padding-bottom: 50px;
+        min-height: auto;
     }
 
     .hero h1 {
@@ -410,6 +432,10 @@ nav.scrolled {
 
     .hero p {
         font-size: 1.1rem;
+    }
+
+    .project-hero {
+        padding: 110px 0 50px;
     }
 
     section {
@@ -521,23 +547,21 @@ nav.scrolled {
     scroll-behavior: smooth;
     padding-bottom: 1rem;
     scrollbar-width: none;
-    /* Hide scrollbar for Chrome/Safari */
+    -webkit-overflow-scrolling: touch;
 }
 
 .carousel-track::-webkit-scrollbar {
     display: none;
-    /* Hide scrollbar for Chrome/Safari */
 }
 
 .carousel-card {
-    flex: 0 0 800px;
-    /* Width of each card */
+    flex: 0 0 600px;
+    height: 380px;
     scroll-snap-align: center;
     background: var(--surface-light);
     border: 1px solid var(--border);
     border-radius: 20px;
     overflow: hidden;
-    height: 300px;
     display: flex;
     flex-direction: column;
 }
@@ -546,6 +570,8 @@ nav.scrolled {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 /* Carousel Buttons */
@@ -565,7 +591,7 @@ nav.scrolled {
     justify-content: center;
     z-index: 10;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transition: opacity 0.3s;
+    transition: all 0.3s ease;
 }
 
 .carousel-btn.prev {
@@ -584,55 +610,146 @@ nav.scrolled {
 @media (max-width: 768px) {
     .carousel-card {
         flex: 0 0 85%;
-        /* Cards take up more space on mobile */
+        height: 300px;
     }
 
     .carousel-btn {
         display: none;
     }
-
-    /* Hide buttons on mobile, use touch scroll */
-}
-
-/* Ensure the card has a fixed height and hidden overflow */
-.carousel-card {
-    flex: 0 0 600px;
-    height: 300px;
-    border-radius: 20px;
-    overflow: hidden;
-    /* Clips the image to the border-radius */
-    display: flex;
-    flex-direction: column;
-    background: var(--surface-light);
-    border: 1px solid var(--border);
-}
-
-/* The magic for images */
-.carousel-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* This makes the image "fit to size" without distortion */
-    object-position: center;
-    /* Keeps the focus on the middle of the photo */
-    display: block;
-}
-
-/* Ensure placeholders also fill the space */
-.carousel-card .media-placeholder {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 @media (max-width: 480px) {
     .carousel-card {
-        flex: 0 0 280px;
-        /* Smaller cards for small phones */
-        height: 250px;
+        flex: 0 0 92%;
+        height: 240px;
+    }
+}
+
+/* --- Project Case Study Shared Styles --- */
+.project-hero {
+    padding: 140px 0 70px;
+    background: linear-gradient(180deg, rgba(124, 58, 237, 0.12) 0%, var(--bg) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    display: block;
+    object-fit: cover;
+}
+
+.project-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin: 4rem 0;
+    padding: 2.2rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+}
+
+.stat-item h4 {
+    color: var(--primary);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+    color: var(--text-high);
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    padding: 2rem;
+    background: var(--surface-light);
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.18);
+}
+
+.feature-card h3 {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.25rem;
+}
+
+.feature-card i {
+    color: var(--primary);
+    flex-shrink: 0;
+}
+
+.production-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: rgba(34, 197, 94, 0.12);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    color: #4ade80;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.production-badge-pulse {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: 0 0 8px #22c55e;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+@media (max-width: 992px) {
+    .project-hero {
+        padding: 130px 0 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .feature-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-stats {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -641,7 +758,6 @@ nav.scrolled {
     border-radius: 24px;
     overflow: hidden;
     background: #000;
-    /* Black bars if video aspect ratio differs */
     border: 1px solid var(--border);
     position: relative;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
@@ -651,7 +767,6 @@ nav.scrolled {
     width: 100%;
     display: block;
     aspect-ratio: 16 / 9;
-    /* Change to 9 / 16 if it's a vertical phone recording */
     object-fit: cover;
 }
 

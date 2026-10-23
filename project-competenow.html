@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CompeteNow | Tinder-Inspired Hackathon Matchmaking App</title>
+  <meta name="description"
+    content="CompeteNow is a production full-stack matchmaking web app for hackathons and competitions, powered by Google Gemini AI and deployed on Google Cloud Run.">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .project-hero {
+      background: linear-gradient(180deg, rgba(168, 85, 247, 0.18) 0%, rgba(124, 58, 237, 0.05) 60%, var(--bg) 100%);
+    }
+
+    .live-demo-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(34, 197, 94, 0.12);
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      color: #4ade80;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .live-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 10px #22c55e;
+      animation: pulse 2s infinite;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .hero-mockup-frame {
+      position: relative;
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.25) 0%, rgba(45, 212, 191, 0.15) 100%);
+      padding: 12px;
+      border-radius: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(168, 85, 247, 0.2);
+    }
+
+    .hero-mockup-frame img {
+      width: 100%;
+      border-radius: 20px;
+      display: block;
+      object-fit: cover;
+    }
+
+    .badge-gemini {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(168, 85, 247, 0.15));
+      border: 1px solid rgba(168, 85, 247, 0.4);
+      color: #c084fc;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="scrolled">
+    <div class="container nav-content">
+      <a href="index.html" class="logo">FARHAN<span style="color:var(--primary)">.</span></a>
+      <div style="display: flex; gap: 1rem; align-items: center;">
+        <a href="https://competenow-602470605842.asia-east1.run.app/#swipe" target="_blank" rel="noopener noreferrer"
+          class="btn btn-primary" style="padding: 0.5rem 1.1rem; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 6px;">
+          <i data-lucide="external-link" style="width: 16px;"></i> Live App
+        </a>
+        <a href="index.html#projects" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Back to Projects</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="project-hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="live-demo-badge reveal">
+          <span class="live-dot"></span> Live in Production &bull; Deployed on Google Cloud Run
+        </div>
+        <span class="section-tag reveal">Flagship Production App &bull; AI Studio &bull; Gemini API</span>
+        <h1 class="reveal" style="font-size: 3.5rem; margin-bottom: 1.25rem; line-height: 1.15;">CompeteNow</h1>
+        <p class="reveal" style="max-width: 620px; font-size: 1.2rem; line-height: 1.6;">
+          A Tinder-inspired matchmaking platform reimagined for hackathons and student competitions. Born from my own personal frustration of missing out on high-impact competitions to build my portfolio, CompeteNow is my first deployed production web application, built with the help of Google AI Studio and integrating Google Gemini APIs for intelligent competition discovery and automated web scouring.
+        </p>
+
+        <div class="hero-actions reveal">
+          <a href="https://competenow-602470605842.asia-east1.run.app/#swipe" target="_blank" rel="noopener noreferrer"
+            class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+            <i data-lucide="sparkles" style="width: 18px;"></i> Launch Live App
+          </a>
+          <a href="#architecture" class="btn btn-outline" style="display: inline-flex; align-items: center; gap: 8px;">
+            <i data-lucide="cpu" style="width: 18px;"></i> View AI Architecture
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-image-container reveal">
+        <div class="hero-mockup-frame">
+          <img src="static/competenow-main.png" alt="CompeteNow Tinder Swipe Card Interface">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Carousel Section: Interface & User Experience -->
+  <section class="carousel-container reveal">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <span class="section-tag">Interactive Preview</span>
+        <h2 class="section-title">Interface &amp; Product Experience</h2>
+        <p style="max-width: 700px; color: var(--text-mid);">
+          Explore the production UI designed around seamless swiping, real-time AI radar scouts, saved competition bookmarking, and tailored participant preference engines.
+        </p>
+      </div>
+
+      <div class="carousel-viewport">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-card">
+            <img src="static/competenow-main.png" alt="Tinder-style Hackathon Swipe Interface with AI Radar" class="carousel-img">
+          </div>
+          <div class="carousel-card">
+            <img src="static/competenow-saved.png" alt="Saved Competitions and Bookmarked Events" class="carousel-img">
+          </div>
+          <div class="carousel-card">
+            <img src="static/competenow-profile.png" alt="User Profile and Skills Matching Engine" class="carousel-img">
+          </div>
+          <div class="carousel-card">
+            <img src="static/competenow-pref.png" alt="Tailored Roles, Hackathon Domains, and Notification Preferences" class="carousel-img">
+          </div>
+        </div>
+
+        <button class="carousel-btn prev" onclick="scrollCarousel(-1)" aria-label="Previous Slide">
+          <i data-lucide="chevron-left"></i>
+        </button>
+        <button class="carousel-btn next" onclick="scrollCarousel(1)" aria-label="Next Slide">
+          <i data-lucide="chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Stats & Key Details -->
+  <section>
+    <div class="container">
+      <div class="project-stats reveal">
+        <div class="stat-item">
+          <h4>Deployment Status</h4>
+          <p style="color: #4ade80; display: flex; align-items: center; gap: 6px;">
+            <span class="production-badge-pulse"></span> Production (Live)
+          </p>
+        </div>
+        <div class="stat-item">
+          <h4>Platform Infrastructure</h4>
+          <p>Google Cloud Run (Asia-East1)</p>
+        </div>
+        <div class="stat-item">
+          <h4>AI Intelligence</h4>
+          <p>Google Gemini API &amp; AI Studio</p>
+        </div>
+        <div class="stat-item">
+          <h4>Frontend &amp; Stack</h4>
+          <p>React, TypeScript, Tailwind CSS</p>
+        </div>
+      </div>
+
+      <div class="reveal" style="margin-bottom: 4rem;">
+        <span class="section-tag">Origin Story</span>
+        <h2 class="section-title">Why I Built CompeteNow: The Personal Problem</h2>
+        <p style="font-size: 1.15rem; max-width: 900px; line-height: 1.7; margin-bottom: 1.5rem;">
+          In tech, diplomas, and software engineering, <em>portfolio is everything</em> and real-world project experience is paramount. Yet, finding suitable, high-calibre hackathons, case competitions, and innovation challenges was a frustrating, fragmented ordeal. Opportunities were scattered across random Discord servers, LinkedIn reposts, and student chat groups &mdash; meaning by the time I discovered great hackathons, registrations had often closed.
+        </p>
+        <p style="font-size: 1.15rem; max-width: 900px; line-height: 1.7;">
+          I created <strong style="color: var(--primary);">CompeteNow</strong> to permanently solve this pain point for myself and fellow ambitious student builders. By combining the hyper-intuitive swipe mechanics popularized by Tinder with <strong>Gemini AI-driven web scouting</strong>, students can effortlessly discover, evaluate, and save tailored hackathons in seconds.
+        </p>
+      </div>
+
+      <div id="architecture"></div>
+      <h2 class="section-title reveal">Key Engineering &amp; AI Contributions</h2>
+      <div class="feature-list" style="margin-bottom: 4rem;">
+        <div class="feature-card reveal">
+          <h3><i data-lucide="flame"></i> Intuitive Tinder-Style Swipe Mechanics</h3>
+          <p>Engineered smooth, gesture-friendly card interactions allowing users to swipe right to save hackathons, swipe left to pass, or bookmark competitions directly. Each card presents crucial decision points at a glance: prize pools ($100,000+), deadlines, team formats (1-4 members), and domain tags.</p>
+        </div>
+        <div class="feature-card reveal">
+          <h3><i data-lucide="bot"></i> First-Ever Gemini API Implementation</h3>
+          <p>Leveraged Google AI Studio and integrated Google Gemini API keys to power dynamic intelligent features. The AI model extracts key metadata, analyzes competition guidelines, and scours the web for newly announced hackathons to continually replenish the pipeline.</p>
+        </div>
+        <div class="feature-card reveal">
+          <h3><i data-lucide="radar"></i> AI Radar &amp; Autonomous Web Scouring</h3>
+          <p>Implemented an active AI Radar scout alert system that automatically notifies users when fresh official competitions are detected, along with an on-demand AI web scouring engine that searches and verifies active application links in real-time.</p>
+        </div>
+        <div class="feature-card reveal">
+          <h3><i data-lucide="cloud"></i> Google Cloud Run Production Deployment</h3>
+          <p>Containerized and deployed the complete web application onto Google Cloud Run in the <code>asia-east1</code> region with zero cold-start bottlenecks, HTTPS encryption, custom responsive viewport support, and full cloud production uptime.</p>
+        </div>
+        <div class="feature-card reveal">
+          <h3><i data-lucide="bookmark-check"></i> Saved Competitions &amp; Pipeline Tracker</h3>
+          <p>Engineered a dedicated Saved events manager where students can monitor saved deadlines, review team matching requirements, track external entry portals, and keep their competition calendar organized.</p>
+        </div>
+        <div class="feature-card reveal">
+          <h3><i data-lucide="sliders"></i> Preference &amp; Skill Profile Tuning</h3>
+          <p>Built fine-grained preference controls enabling students to filter by hackathon focus (AI/ML, Web3, FinTech, Sustainability, Design), location formats (In-Person vs. Virtual), and role specializations (Frontend, Backend, Data, Pitch).</p>
+        </div>
+      </div>
+
+      <div class="reveal" style="margin-bottom: 6rem;">
+        <h2 class="section-title">Key Reflections &amp; Milestones</h2>
+        <ul style="max-width: 900px; font-size: 1.05rem; line-height: 1.8;">
+          <li><strong style="color: var(--primary);">First Production Web App:</strong> Moving from local localhost prototypes to deploying a live, publicly accessible web application on Google Cloud Run was a major developmental milestone that taught me cloud packaging, containerization, and environment variable security.</li>
+          <li><strong style="color: var(--primary);">First AI Integration with Gemini:</strong> Working hands-on with Google AI Studio and Google Gemini API keys transformed my understanding of prompt engineering, model temperature tuning, and structuring unstructured web hackathon data into clean UI cards.</li>
+          <li><strong style="color: var(--primary);">Solving a True Personal Need:</strong> Building a tool for a challenge I face daily fueled product intuition &mdash; every feature, from instant prize pool highlights to one-click saving, was designed from an authentic user-first perspective.</li>
+          <li><strong style="color: var(--primary);">Next Steps:</strong> Future iterations will introduce AI-powered team matchmaking to pair solo hackers with teammates whose complementary skills match the competition criteria.</li>
+        </ul>
+      </div>
+
+      <!-- Action Card -->
+      <div class="reveal" style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.15) 0%, rgba(45, 212, 191, 0.1) 100%); border: 1px solid rgba(124, 58, 237, 0.3); border-radius: 24px; padding: 3rem; text-align: center; margin-bottom: 5rem;">
+        <h3 style="font-size: 2rem; margin-bottom: 1rem;">Experience CompeteNow in Action</h3>
+        <p style="max-width: 600px; margin: 0 auto 2rem; color: var(--text-mid);">Swipe through real hackathons, test out the AI Radar, and explore how AI can streamline competition discovery for students.</p>
+        <a href="https://competenow-602470605842.asia-east1.run.app/#swipe" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+          <i data-lucide="external-link" style="width: 18px;"></i> Open Live CompeteNow App
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="socials-footer">
+    <div class="container">
+      <p class="copyright">&copy; 2026 Farhan. Project Case Study &bull; CompeteNow.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
