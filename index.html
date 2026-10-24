@@ -185,266 +185,449 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects">
+  <!-- Projects Interactive Timeline Journey Section -->
+  <section id="projects" class="projects-timeline-section">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Portfolio</span>
-        <h2 class="section-title">Academic & Personal Projects</h2>
+      <div class="section-header reveal" style="text-align: center; max-width: 700px; margin: 0 auto 5rem;">
+        <span class="fun-tag">🚀 The Journey &amp; Milestones</span>
+        <h2 class="section-title">Projects &amp; <span class="title-gradient">Creations</span></h2>
+        <p class="section-sub" style="margin: 0 auto;">A journey through what I've engineered — from early Apple Store prototypes to live production AI apps in cloud infrastructure.</p>
       </div>
 
-      <div class="projects-grid">
-        <!-- Project 0: CompeteNow (Flagship Production App) -->
-        <article class="project-card reveal" style="border-color: rgba(124, 58, 237, 0.4); box-shadow: 0 10px 30px rgba(124, 58, 237, 0.15);">
-          <div class="project-image">
-            <img src="static/competenow-main.png" alt="CompeteNow Tinder-Style Hackathon Platform">
+      <!-- Vertical Interactive Timeline Track -->
+      <div class="timeline-journey-track" role="list" aria-label="Project journey from 2022 to October 2026">
+        <div class="timeline-central-spine" aria-hidden="true"></div>
+
+        <!-- CompeteNow (September 2026 - Production Flagship) -->
+        <div class="timeline-journey-node left-step reveal theme-competenow" data-date="2026-09" role="listitem">
+          <div class="timeline-marker">
+            <span class="marker-dot"></span>
+            <span class="marker-year">Sep 2026</span>
           </div>
-          <div class="project-info">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 8px;">
-              <span class="project-category" style="margin-bottom: 0;">Production App / Google Cloud Run</span>
+          <div class="timeline-content-card">
+            <div class="card-badge-row">
+              <span class="card-timeline-pill">Production App</span>
               <span class="production-badge"><span class="production-badge-pulse"></span> Live in Prod</span>
             </div>
-            <h3>CompeteNow</h3>
-            <p>Tinder-inspired matchmaking web app for hackathons and student competitions. Built with Google AI Studio and Gemini API keys to scout live competitions and match students with high-impact opportunities.</p>
-            <div class="tag-group" style="margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; gap: 5px;">
-              <span style="font-size: 0.7rem; padding: 2px 8px; background: rgba(124, 58, 237, 0.2); color: #c084fc; border-radius: 4px; font-weight: 600;">Gemini AI API</span>
-              <span style="font-size: 0.7rem; padding: 2px 8px; background: var(--surface-light); border-radius: 4px;">AI Studio</span>
-              <span style="font-size: 0.7rem; padding: 2px 8px; background: var(--surface-light); border-radius: 4px;">Cloud Run</span>
-              <span style="font-size: 0.7rem; padding: 2px 8px; background: var(--surface-light); border-radius: 4px;">React</span>
+            <div class="timeline-card-media">
+              <img src="static/competenow-main.png" alt="CompeteNow Tinder-Style Hackathon Platform" loading="lazy">
+              <span class="card-floating-pill">✨ Gemini AI + Cloud Run</span>
             </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
-              <a href="project-competenow.html" class="btn btn-outline"
-                style="padding: 0.5rem 0.75rem; font-size: 0.8rem; text-align: center;">Case Study</a>
-              <a href="https://competenow-602470605842.asia-east1.run.app/#swipe" target="_blank" rel="noopener noreferrer" class="btn btn-primary"
-                style="padding: 0.5rem 0.75rem; font-size: 0.8rem; text-align: center; display: inline-flex; align-items: center; justify-content: center; gap: 4px;">
-                <i data-lucide="external-link" style="width: 14px;"></i> Live App
-              </a>
-            </div>
-          </div>
-        </article>
+            <div class="timeline-card-body">
+              <span class="card-kicker">Full-Stack Matchmaking Platform</span>
+              <h3>CompeteNow</h3>
+              <p>Tinder-inspired matchmaking web app for hackathons and student competitions. Powered by Google AI Studio and Gemini API keys to scout live competitions and match students with high-impact opportunities.</p>
+              
+              <div class="fun-tag-cluster">
+                <span class="fun-chip highlight">Gemini AI API</span>
+                <span class="fun-chip">Google Cloud Run</span>
+                <span class="fun-chip">React</span>
+                <span class="fun-chip">AI Studio</span>
+              </div>
 
-        <!-- Project: Founders Club (CCA Ground-Up Redesign & Groq AI) -->
-        <article class="project-card reveal" style="border-color: rgba(234, 88, 12, 0.35); box-shadow: 0 10px 30px rgba(234, 88, 12, 0.12);">
-          <div class="project-image">
-            <img src="static/NYPFC MAIN.png" alt="Founders Club Website Redesign & Groq AI">
-          </div>
-          <div class="project-info">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 8px;">
-              <span class="project-category" style="margin-bottom: 0;">CCA Platform / Ground-Up Redesign</span>
-              <span style="font-size: 0.72rem; padding: 2px 8px; border-radius: 999px; background: rgba(234, 88, 12, 0.15); border: 1px solid rgba(234, 88, 12, 0.35); color: #fb923c; font-weight: 600;">Open House Edition</span>
+              <div class="card-cta-duo">
+                <a href="project-competenow.html" class="fun-btn fun-btn-ghost">
+                  <span>Case Study</span>
+                  <i data-lucide="arrow-up-right"></i>
+                </a>
+                <a href="https://competenow-602470605842.asia-east1.run.app/#swipe" target="_blank" rel="noopener noreferrer" class="fun-btn fun-btn-solid">
+                  <i data-lucide="external-link"></i>
+                  <span>Live App</span>
+                </a>
+              </div>
             </div>
-            <h3>Founders Club & AI Advisor</h3>
-            <p>Redesigned the official student entrepreneurship club website from scratch with a friend. Features alumni stories, events, and a Groq AI Open House advisor that matches prospective students to diplomas and challenges startup ideas with lean, real-world validation before writing code.</p>
-            <div class="tag-group" style="margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; gap: 5px;">
-              <span style="font-size: 0.7rem; padding: 2px 8px; background: rgba(249, 115, 22, 0.15); color: #fb923c; border-radius: 4px; font-weight: 600;">Groq AI (14K Free Req)</span>
-              <span style="font-size: 0.7rem; padding: 2px 8px; background: rgba(234, 88, 12, 0.15); color: #fb923c; border-radius: 4px; font-weight: 600;">Open House Kiosk</span>
-              <span style="font-size: 0.7rem; padding: 2px 8px; background: var(--surface-light); border-radius: 4px;">JavaScript</span>
-              <span style="font-size: 0.7rem; padding: 2px 8px; background: var(--surface-light); border-radius: 4px;">Editorial UI/UX</span>
-            </div>
-            <a href="project-foundersclub.html" class="btn btn-outline"
-              style="padding: 0.5rem 1rem; font-size: 0.8rem; width: 100%; text-align: center;">View Case Study</a>
           </div>
-        </article>
+        </div>
 
-        <!-- Project 1: WDP -->
-        <article class="project-card reveal">
-          <div class="project-image">
-            <img src="static/intergenmockup.png" alt="Intergenerational Platform">
+        <!-- Founders Club (October 2026 - CCA Ground-up Redesign & Groq AI) -->
+        <div class="timeline-journey-node right-step reveal theme-founders" data-date="2026-10" role="listitem">
+          <div class="timeline-marker">
+            <span class="marker-dot"></span>
+            <span class="marker-year">Oct 2026</span>
           </div>
-          <div class="project-info">
-            <span class="project-category">Full-Stack Web / Nanyang Poly</span>
-            <h3>InterGen</h3>
-            <p>Led a team of 5 to build a social platform bridging the gap between youth and seniors. Architected the
-              Profile & Friends system using Python, Flask, and SQLite.</p>
-            <div class="tag-group" style="margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; gap: 5px;">
-              <span
-                style="font-size: 0.7rem; padding: 2px 8px; background: var(--surface-light); border-radius: 4px;">Python</span>
-              <span
-                style="font-size: 0.7rem; padding: 2px 8px; background: var(--surface-light); border-radius: 4px;">Flask</span>
+          <div class="timeline-content-card">
+            <div class="card-badge-row">
+              <span class="card-timeline-pill">CCA Project</span>
+              <span class="fun-status-badge orange">🚀 Open House Ready</span>
             </div>
-            <a href="project-bridge.html" class="btn btn-outline"
-              style="padding: 0.5rem 1rem; font-size: 0.8rem; width: 100%; text-align: center;">View Case Study</a>
-          </div>
-        </article>
+            <div class="timeline-card-media">
+              <img src="static/NYPFC MAIN.png" alt="Founders Club Website Redesign & Groq AI" loading="lazy">
+              <span class="card-floating-pill orange-pill">⚡ 14K Req/Day Groq AI</span>
+            </div>
+            <div class="timeline-card-body">
+              <span class="card-kicker">CCA Platform / Ground-Up Redesign</span>
+              <h3>Founders Club &amp; AI Advisor</h3>
+              <p>Redesigned the official student entrepreneurship club website from scratch with a friend. Features alumni stories, events, and a Groq AI Open House advisor that validates startup ideas before writing code.</p>
+              
+              <div class="fun-tag-cluster">
+                <span class="fun-chip orange-chip">Groq AI API</span>
+                <span class="fun-chip">Open House Kiosk</span>
+                <span class="fun-chip">JavaScript</span>
+                <span class="fun-chip">Editorial UI/UX</span>
+              </div>
 
-        <!-- Project 2: NYP Floorball -->
-        <article class="project-card reveal">
-          <div class="project-image">
-            <img src="static/SingaporeWON.jpg" alt="NYP Floorball Website">
-          </div>
-          <div class="project-info">
-            <span class="project-category">UX Design / NYP Academic Project </span>
-            <h3>NYP Floorball Website</h3>
-            <p>Prototype website for the Nanyang Polytechnic Floorball team, featuring team news, schedules, and player
-              profiles for the local sports community.</p>
-            <div class="tag-group" style="margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; gap: 5px;">
-              <span
-                style="font-size: 0.7rem; padding: 2px 8px; background: var(--surface-light); border-radius: 4px;">HTML/CSS</span>
-              <span
-                style="font-size: 0.7rem; padding: 2px 8px; background: var(--surface-light); border-radius: 4px;">JavaScript</span>
+              <div class="card-cta-duo">
+                <a href="project-foundersclub.html" class="fun-btn fun-btn-solid full-width orange-btn">
+                  <span>Explore Case Study</span>
+                  <i data-lucide="arrow-right"></i>
+                </a>
+              </div>
             </div>
-            <a href="project-floorball.html" class="btn btn-outline"
-              style="padding: 0.5rem 1rem; font-size: 0.8rem; width: 100%; text-align: center;">View Case Study</a>
           </div>
-        </article>
+        </div>
 
-        <!-- Project 3: MediaFly -->
-        <article class="project-card reveal">
-          <div class="project-image">
-            <img src="static/present.jpeg" alt="MediaFly iOS App">
+        <!-- PRUNavigator (June 2026 - PolyFinTech100 API Hackathon) -->
+        <div class="timeline-journey-node left-step reveal theme-pru" data-date="2026-06" role="listitem">
+          <div class="timeline-marker">
+            <span class="marker-dot"></span>
+            <span class="marker-year">Jun 2026</span>
           </div>
-          <div class="project-info">
-            <span class="project-category">iOS Mobile / Apple Store Demo</span>
-            <h3>MediaFly</h3>
-            <p>iOS messaging prototype designed to combat teen loneliness. Developed with Swift Playgrounds and
-              presented at the Marina Bay Sands Apple Store.</p>
-            <div class="tag-group" style="margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; gap: 5px;">
-              <span
-                style="font-size: 0.7rem; padding: 2px 8px; background: var(--surface-light); border-radius: 4px;">Swift</span>
-              <span
-                style="font-size: 0.7rem; padding: 2px 8px; background: var(--surface-light); border-radius: 4px;">UI/UX</span>
+          <div class="timeline-content-card">
+            <div class="card-badge-row">
+              <span class="card-timeline-pill">Hackathon Winner</span>
+              <span class="fun-status-badge pru">🏆 Prudential Challenge</span>
             </div>
-            <a href="project-mediafly.html" class="btn btn-outline"
-              style="padding: 0.5rem 1rem; font-size: 0.8rem; width: 100%; text-align: center;">View Case Study</a>
-          </div>
-        </article>
+            <div class="timeline-card-media">
+              <img src="static/PRU-Main.png" alt="PolyFinTech100 PRUNavigator Hackathon" loading="lazy">
+              <span class="card-floating-pill pru-pill">💡 API Innovation</span>
+            </div>
+            <div class="timeline-card-body">
+              <span class="card-kicker">PolyFinTech100 API Hackathon</span>
+              <h3>PRUNavigator</h3>
+              <p>Built a fintech-focused prototype using public financial APIs to address real-world financial literacy with rapid prototyping, sleek dashboard UI, and practical automated calculations.</p>
+              
+              <div class="fun-tag-cluster">
+                <span class="fun-chip pru-chip">API Integration</span>
+                <span class="fun-chip">FinTech</span>
+                <span class="fun-chip">Rapid Prototyping</span>
+                <span class="fun-chip">Chart.js</span>
+              </div>
 
-        <!-- Project 4: PolyFinTech100 API Hackathon -->
-        <article class="project-card reveal">
-          <div class="project-image">
-            <img src="static/PRU-Main.png" alt="PolyFinTech100 API Hackathon">
-          </div>
-          <div class="project-info">
-            <span class="project-category">PolyFinTech100 API Hackathon / Innovation Challenge</span>
-            <h3>PRUNavigator</h3>
-            <p>Built a fintech-focused prototype using public APIs to address a real-world problem with rapid
-              prototyping, clean UI, and practical functionality.</p>
-            <div class="tag-group" style="margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; gap: 5px;">
-              <span
-                style="font-size: 0.7rem; padding: 2px 8px; background: var(--surface-light); border-radius: 4px;">API
-                Integration</span>
-              <span
-                style="font-size: 0.7rem; padding: 2px 8px; background: var(--surface-light); border-radius: 4px;">Fintech</span>
+              <div class="card-cta-duo">
+                <a href="project-polyfintech100.html" class="fun-btn fun-btn-solid full-width pru-btn">
+                  <span>View Case Study</span>
+                  <i data-lucide="arrow-right"></i>
+                </a>
+              </div>
             </div>
-            <a href="project-polyfintech100.html" class="btn btn-outline"
-              style="padding: 0.5rem 1rem; font-size: 0.8rem; width: 100%; text-align: center;">View Case Study</a>
           </div>
-        </article>
+        </div>
 
-        <!-- Project 5: Market Strategy & Data Analytics -->
-        <article class="project-card reveal">
-          <div class="project-image">
-            <img src="static/ADA-Main.png" alt="Market Strategy & Data Analytics">
+        <!-- 4. Market Strategy & Data Analytics (February 2026) -->
+        <div class="timeline-journey-node right-step reveal theme-market" data-date="2026-02" role="listitem">
+          <div class="timeline-marker">
+            <span class="marker-dot"></span>
+            <span class="marker-year">Feb 2026</span>
           </div>
-          <div class="project-info">
-            <span class="project-category">AI & Data Analytics / Group Project</span>
-            <h3>Market Strategy & Data Analytics</h3>
-            <p>Built a Power BI Market Attractiveness Index ranking 13 countries using DAX-powered multi-variable
-              trade-off analysis to identify the optimal market entry sequence.</p>
-            <div class="tag-group" style="margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; gap: 5px;">
-              <span
-                style="font-size: 0.7rem; padding: 2px 8px; background: var(--surface-light); border-radius: 4px;">Power
-                BI</span>
-              <span
-                style="font-size: 0.7rem; padding: 2px 8px; background: var(--surface-light); border-radius: 4px;">DAX</span>
+          <div class="timeline-content-card">
+            <div class="card-badge-row">
+              <span class="card-timeline-pill">Data Analytics</span>
+              <span class="fun-status-badge emerald">📈 Multi-Variable DAX</span>
             </div>
-            <a href="project-dataanalytics.html" class="btn btn-outline"
-              style="padding: 0.5rem 1rem; font-size: 0.8rem; width: 100%; text-align: center;">View Case Study</a>
+            <div class="timeline-card-media">
+              <img src="static/ADA-Main.png" alt="Market Strategy & Data Analytics" loading="lazy">
+              <span class="card-floating-pill emerald-pill">🌍 13 Countries Evaluated</span>
+            </div>
+            <div class="timeline-card-body">
+              <span class="card-kicker">AI &amp; Data Analytics / Strategy</span>
+              <h3>Market Strategy &amp; DAX</h3>
+              <p>Constructed a Power BI Market Attractiveness Index ranking 13 countries using DAX-powered multi-variable trade-off analysis to pinpoint optimal go-to-market rollout sequences.</p>
+              
+              <div class="fun-tag-cluster">
+                <span class="fun-chip emerald-chip">Power BI</span>
+                <span class="fun-chip">DAX Modeling</span>
+                <span class="fun-chip">Market Scoring</span>
+                <span class="fun-chip">Strategy</span>
+              </div>
+
+              <div class="card-cta-duo">
+                <a href="project-dataanalytics.html" class="fun-btn fun-btn-solid full-width emerald-btn">
+                  <span>View Case Study</span>
+                  <i data-lucide="arrow-right"></i>
+                </a>
+              </div>
+            </div>
           </div>
-        </article>
+        </div>
+
+        <!-- 5. InterGen (October 2025 - Full-Stack Social Platform) -->
+        <div class="timeline-journey-node left-step reveal theme-intergen" data-date="2025-10" role="listitem">
+          <div class="timeline-marker">
+            <span class="marker-dot"></span>
+            <span class="marker-year">Oct 2025</span>
+          </div>
+          <div class="timeline-content-card">
+            <div class="card-badge-row">
+              <span class="card-timeline-pill">Full-Stack Lead</span>
+              <span class="fun-status-badge intergen">👥 Team of 5</span>
+            </div>
+            <div class="timeline-card-media">
+              <img src="static/intergenmockup.png" alt="Intergenerational Platform" loading="lazy">
+              <span class="card-floating-pill intergen-pill">🐍 Python &amp; SQLite</span>
+            </div>
+            <div class="timeline-card-body">
+              <span class="card-kicker">Full-Stack Web / Nanyang Poly</span>
+              <h3>InterGen</h3>
+              <p>Led a 5-engineer team building a community social platform bridging youth and seniors. Designed the Profile, Friendship, and Activity exchange engine using Python, Flask, and SQLite.</p>
+              
+              <div class="fun-tag-cluster">
+                <span class="fun-chip intergen-chip">Python</span>
+                <span class="fun-chip">Flask</span>
+                <span class="fun-chip">SQLite</span>
+                <span class="fun-chip">Jinja2</span>
+              </div>
+
+              <div class="card-cta-duo">
+                <a href="project-bridge.html" class="fun-btn fun-btn-solid full-width intergen-btn">
+                  <span>View Case Study</span>
+                  <i data-lucide="arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. NYP Floorball Prototype (July 2025) -->
+        <div class="timeline-journey-node right-step reveal theme-floorball" data-date="2025-07" role="listitem">
+          <div class="timeline-marker">
+            <span class="marker-dot"></span>
+            <span class="marker-year">Jul 2025</span>
+          </div>
+          <div class="timeline-content-card">
+            <div class="card-badge-row">
+              <span class="card-timeline-pill">Sports &amp; UI</span>
+              <span class="fun-status-badge blue">🏑 Sports Tech</span>
+            </div>
+            <div class="timeline-card-media">
+              <img src="static/SingaporeWON.jpg" alt="NYP Floorball Website" loading="lazy">
+              <span class="card-floating-pill blue-pill">⚡ Fast &amp; Athletic</span>
+            </div>
+            <div class="timeline-card-body">
+              <span class="card-kicker">UX Design / Sports Community</span>
+              <h3>NYP Floorball Platform</h3>
+              <p>Dynamic digital hub for the Nanyang Polytechnic Floorball team, featuring live match rosters, athletic performance highlights, player stats, and varsity tournament schedules.</p>
+              
+              <div class="fun-tag-cluster">
+                <span class="fun-chip blue-chip">UI/UX</span>
+                <span class="fun-chip">HTML5 / CSS3</span>
+                <span class="fun-chip">JavaScript</span>
+                <span class="fun-chip">Sports Media</span>
+              </div>
+
+              <div class="card-cta-duo">
+                <a href="project-floorball.html" class="fun-btn fun-btn-solid full-width blue-btn">
+                  <span>View Case Study</span>
+                  <i data-lucide="arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. MediaFly (2022 - Marina Bay Sands Apple Demo) -->
+        <div class="timeline-journey-node left-step reveal theme-mediafly" data-date="2022-01" role="listitem">
+          <div class="timeline-marker">
+            <span class="marker-dot"></span>
+            <span class="marker-year">2022</span>
+          </div>
+          <div class="timeline-content-card">
+            <div class="card-badge-row">
+              <span class="card-timeline-pill">Origin Milestone</span>
+              <span class="fun-status-badge teal">🏛️ Marina Bay Sands</span>
+            </div>
+            <div class="timeline-card-media">
+              <img src="static/present.jpeg" alt="MediaFly iOS App at MBS Apple Store" loading="lazy">
+              <span class="card-floating-pill teal-pill">🍏 Apple Store Presentation</span>
+            </div>
+            <div class="timeline-card-body">
+              <span class="card-kicker">iOS Mobile / Apple Mentorship</span>
+              <h3>MediaFly @ MBS</h3>
+              <p>iOS messaging prototype created to combat adolescent isolation. Mentored by Apple engineers and pitched directly on stage inside the iconic Marina Bay Sands Apple flagship store.</p>
+              
+              <div class="fun-tag-cluster">
+                <span class="fun-chip teal-chip">Swift Playgrounds</span>
+                <span class="fun-chip">Apple Mentorship</span>
+                <span class="fun-chip">iOS Prototyping</span>
+                <span class="fun-chip">Social Impact</span>
+              </div>
+
+              <div class="card-cta-duo">
+                <a href="project-mediafly.html" class="fun-btn fun-btn-solid full-width teal-btn">
+                  <span>View Case Study</span>
+                  <i data-lucide="arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills">
+  <!-- Interactive Skills Showcase Section -->
+  <section id="skills" class="skills-showcase-section">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">Tech Stack &amp; Soft Skills</span>
-        <h2 class="section-title">Tools &amp; Skills</h2>
+        <span class="fun-tag">⚡ Arsenal &amp; Capabilities</span>
+        <h2 class="section-title">The <span class="title-gradient">Toolbox</span> &amp; Strengths</h2>
+        <p class="section-sub">Real-world tools I use to take ideas from whiteboard to live, production code.</p>
       </div>
 
-      <!-- Technical -->
-      <div class="reveal" style="margin-bottom: 0.5rem;">
-        <p
-          style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary); font-weight: 600; margin-bottom: 1.25rem;">
-          Technical</p>
-      </div>
-      <div class="skills-container reveal" style="margin-bottom: 3rem;">
-        <div class="skill-item">
-          <div class="skill-icon"><i data-lucide="code-2"></i></div><span>Python</span>
-        </div>
-        <div class="skill-item">
-          <div class="skill-icon"><i data-lucide="terminal"></i></div><span>JavaScript (ES6)</span>
-        </div>
-        <div class="skill-item">
-          <div class="skill-icon"><i data-lucide="layers"></i></div><span>HTML5 / CSS3</span>
-        </div>
-        <div class="skill-item">
-          <div class="skill-icon"><i data-lucide="database"></i></div><span>SQL</span>
-        </div>
-        <div class="skill-item">
-          <div class="skill-icon"><i data-lucide="layout"></i></div><span>Flask</span>
-        </div>
-        <div class="skill-item">
-          <div class="skill-icon"><i data-lucide="box"></i></div><span>Jinja2</span>
-        </div>
-        <div class="skill-item">
-          <div class="skill-icon"><i data-lucide="grid"></i></div><span>Bootstrap</span>
-        </div>
-        <div class="skill-item">
-          <div class="skill-icon"><i data-lucide="database"></i></div><span>SQLite / MySQL</span>
-        </div>
-        <div class="skill-item">
-          <div class="skill-icon"><i data-lucide="leaf"></i></div><span>MongoDB</span>
-        </div>
-        <div class="skill-item">
-          <div class="skill-icon"><i data-lucide="git-branch"></i></div><span>Git / GitHub</span>
-        </div>
-        <div class="skill-item">
-          <div class="skill-icon"><i data-lucide="users"></i></div><span>Agile / Scrum</span>
-        </div>
-        <div class="skill-item">
-          <div class="skill-icon"><i data-lucide="lightbulb"></i></div><span>OOP</span>
-        </div>
-        <div class="skill-item">
-          <div class="skill-icon"><i data-lucide="bar-chart-2"></i></div><span>Power BI / DAX</span>
-        </div>
-        <div class="skill-item">
-          <div class="skill-icon"><i data-lucide="sparkles"></i></div><span>Google Gemini API</span>
-        </div>
-        <div class="skill-item">
-          <div class="skill-icon"><i data-lucide="cloud"></i></div><span>Google Cloud Run</span>
-        </div>
-        <div class="skill-item">
-          <div class="skill-icon"><i data-lucide="cpu"></i></div><span>React.js</span>
-        </div>
-        <div class="skill-item">
-          <div class="skill-icon"><i data-lucide="shield-check"></i></div><span>SQLAlchemy</span>
-        </div>
+      <!-- Category Filter Tabs -->
+      <div class="skills-filter-nav reveal" id="skillsFilterNav">
+        <button class="skill-tab-btn active" data-filter="all">🌟 All Strengths</button>
+        <button class="skill-tab-btn" data-filter="ai-cloud">🤖 AI &amp; Cloud</button>
+        <button class="skill-tab-btn" data-filter="fullstack">⚡ Full-Stack &amp; Web</button>
+        <button class="skill-tab-btn" data-filter="data">📊 Data &amp; Analytics</button>
+        <button class="skill-tab-btn" data-filter="mindset">💡 Leadership &amp; Soft</button>
       </div>
 
-      <!-- Soft Skills -->
-      <div class="reveal" style="margin-bottom: 0.5rem;">
-        <p
-          style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary); font-weight: 600; margin-bottom: 1.25rem;">
-          Soft Skills</p>
+      <!-- Skills Dynamic Grid -->
+      <div class="skills-dynamic-grid reveal" id="skillsGrid">
+
+        <!-- Card: AI & Cloud Deployment -->
+        <div class="skill-group-card theme-ai" data-category="ai-cloud">
+          <div class="group-header">
+            <div class="group-icon-bubble ai-bubble">
+              <i data-lucide="sparkles"></i>
+            </div>
+            <div>
+              <h3>GenAI &amp; Cloud Systems</h3>
+              <p>LLM integrations &amp; containerized production</p>
+            </div>
+          </div>
+          <div class="group-tags">
+            <span class="skill-badge highlight"><i data-lucide="bot"></i> Gemini AI API</span>
+            <span class="skill-badge highlight"><i data-lucide="zap"></i> Groq AI (Llama 3)</span>
+            <span class="skill-badge"><i data-lucide="cloud"></i> Google Cloud Run</span>
+            <span class="skill-badge"><i data-lucide="cpu"></i> AI Studio</span>
+            <span class="skill-badge"><i data-lucide="git-branch"></i> Git / GitHub CI</span>
+          </div>
+          <div class="skill-card-footer">
+            <span>Shipped: CompeteNow &amp; Founders Club AI</span>
+          </div>
+        </div>
+
+        <!-- Card: Full-Stack & Web -->
+        <div class="skill-group-card theme-web" data-category="fullstack">
+          <div class="group-header">
+            <div class="group-icon-bubble web-bubble">
+              <i data-lucide="code-2"></i>
+            </div>
+            <div>
+              <h3>Full-Stack Architecture</h3>
+              <p>Reactive clients &amp; scalable Python backends</p>
+            </div>
+          </div>
+          <div class="group-tags">
+            <span class="skill-badge highlight"><i data-lucide="terminal"></i> Python</span>
+            <span class="skill-badge highlight"><i data-lucide="file-code"></i> JavaScript (ES6+)</span>
+            <span class="skill-badge"><i data-lucide="layout"></i> Flask</span>
+            <span class="skill-badge"><i data-lucide="box"></i> Jinja2 Templates</span>
+            <span class="skill-badge"><i data-lucide="component"></i> React.js</span>
+            <span class="skill-badge"><i data-lucide="layers"></i> HTML5 / CSS3 Grid</span>
+            <span class="skill-badge"><i data-lucide="grid"></i> Bootstrap</span>
+          </div>
+          <div class="skill-card-footer">
+            <span>Shipped: InterGen, CompeteNow &amp; Floorball</span>
+          </div>
+        </div>
+
+        <!-- Card: Databases & FinTech APIs -->
+        <div class="skill-group-card theme-db" data-category="fullstack">
+          <div class="group-header">
+            <div class="group-icon-bubble db-bubble">
+              <i data-lucide="database"></i>
+            </div>
+            <div>
+              <h3>Data Stores &amp; APIs</h3>
+              <p>Relational databases &amp; robust REST APIs</p>
+            </div>
+          </div>
+          <div class="group-tags">
+            <span class="skill-badge highlight"><i data-lucide="database"></i> SQL (MySQL / SQLite)</span>
+            <span class="skill-badge"><i data-lucide="shield-check"></i> SQLAlchemy ORM</span>
+            <span class="skill-badge"><i data-lucide="leaf"></i> MongoDB</span>
+            <span class="skill-badge"><i data-lucide="refresh-cw"></i> RESTful API Design</span>
+            <span class="skill-badge"><i data-lucide="lock"></i> Auth &amp; Session CRUD</span>
+          </div>
+          <div class="skill-card-footer">
+            <span>Shipped: PRUNavigator &amp; InterGen Database</span>
+          </div>
+        </div>
+
+        <!-- Card: Data Analytics & Business Intelligence -->
+        <div class="skill-group-card theme-data" data-category="data">
+          <div class="group-header">
+            <div class="group-icon-bubble data-bubble">
+              <i data-lucide="bar-chart-3"></i>
+            </div>
+            <div>
+              <h3>Analytics &amp; BI Modeling</h3>
+              <p>Multi-variable decision indices &amp; reporting</p>
+            </div>
+          </div>
+          <div class="group-tags">
+            <span class="skill-badge highlight"><i data-lucide="pie-chart"></i> Power BI</span>
+            <span class="skill-badge highlight"><i data-lucide="binary"></i> DAX (RANKX &amp; Scoring)</span>
+            <span class="skill-badge"><i data-lucide="trending-up"></i> Market Attractiveness Index</span>
+            <span class="skill-badge"><i data-lucide="table"></i> Multi-Variable Trade-off</span>
+            <span class="skill-badge"><i data-lucide="line-chart"></i> Data Visualization</span>
+          </div>
+          <div class="skill-card-footer">
+            <span>Authored: 13-Country Expansion Strategy</span>
+          </div>
+        </div>
+
+        <!-- Card: Mobile & Rapid Prototyping -->
+        <div class="skill-group-card theme-mobile" data-category="fullstack">
+          <div class="group-header">
+            <div class="group-icon-bubble mobile-bubble">
+              <i data-lucide="smartphone"></i>
+            </div>
+            <div>
+              <h3>Rapid Prototyping</h3>
+              <p>Interactive testbeds &amp; mobile proofs-of-concept</p>
+            </div>
+          </div>
+          <div class="group-tags">
+            <span class="skill-badge highlight"><i data-lucide="apple"></i> Swift Playgrounds</span>
+            <span class="skill-badge"><i data-lucide="palette"></i> Figma Wireframing</span>
+            <span class="skill-badge"><i data-lucide="compass"></i> Human-Centric UX</span>
+            <span class="skill-badge"><i data-lucide="gauge"></i> Sprint Pitching &amp; Demos</span>
+          </div>
+          <div class="skill-card-footer">
+            <span>Pitched at: Marina Bay Sands Apple Store</span>
+          </div>
+        </div>
+
+        <!-- Card: Leadership & Superpowers -->
+        <div class="skill-group-card theme-leadership" data-category="mindset">
+          <div class="group-header">
+            <div class="group-icon-bubble leadership-bubble">
+              <i data-lucide="rocket"></i>
+            </div>
+            <div>
+              <h3>Leadership &amp; Execution</h3>
+              <p>How I collaborate, ship, and lead teams</p>
+            </div>
+          </div>
+          <div class="group-tags">
+            <span class="skill-badge highlight"><i data-lucide="users"></i> Agile / Scrum Sprint Lead</span>
+            <span class="skill-badge"><i data-lucide="message-square"></i> Clear Stakeholder Comms</span>
+            <span class="skill-badge"><i data-lucide="award"></i> 3.97 GPA Academic Discipline</span>
+            <span class="skill-badge"><i data-lucide="flame"></i> Lean Startup Validation</span>
+            <span class="skill-badge"><i data-lucide="repeat"></i> High Adaptability</span>
+          </div>
+          <div class="skill-card-footer">
+            <span>Leadership: CCA Tech Lead &amp; Project Lead</span>
+          </div>
+        </div>
+
       </div>
-      <div class="skills-container reveal" style="margin-bottom: 3rem;">
-        <div class="skill-item">
-          <div class="skill-icon"><i data-lucide="users"></i></div><span>Collaborative Teamwork</span>
-        </div>
-        <div class="skill-item">
-          <div class="skill-icon"><i data-lucide="message-circle"></i></div><span>Communication</span>
-        </div>
-        <div class="skill-item">
-          <div class="skill-icon"><i data-lucide="compass"></i></div><span>Strategic Problem-Solving</span>
-        </div>
-        <div class="skill-item">
-          <div class="skill-icon"><i data-lucide="refresh-cw"></i></div><span>Adaptability</span>
-        </div>
-      </div>
+    </div>
+  </section>
 
 
 
